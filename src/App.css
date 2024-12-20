@@ -1,0 +1,11 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    min-height: 100vh;
+}
+div {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Content area takes up available space */
+  }

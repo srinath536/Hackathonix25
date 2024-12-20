@@ -1,0 +1,55 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  padding: 20px 46px 20px 36px;
+  position: relative;
+  z-index: 10;
+  width:88%;
+  max-width:900px;
+  align-items: center;
+  box-sizing: border-box;
+  margin: 20px auto;
+  background-color: rgba(40, 40, 40, 0.2);
+  border: 1px solid; 
+  border-image: linear-gradient(180deg, #5F0F40, #310E68) 1; 
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+}
+  .logo {
+    font-family: "Bruno Ace", sans-serif; 
+    color: #c8f560; 
+    font-size: 1.8rem;
+    font-weight: bold;
+    transition: transform 0.2s ease-in-out;
+  }
+  .logo:hover {
+    transform: scale(1.1); 
+  }
+  .navigation {
+    display: flex;
+  align-items: center;
+  gap: 2rem;
+  }
+  
+  .navigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .navigation li {
+    display: inline-block;
+    margin: 0 15px;
+    font-size: 1rem;
+  }
+  .navigation li:hover {
+    transform: translateY(-0.3rem); 
+    color: #310E68; 
+  }
+  @media (max-width: 900px) {
+    .header {
+      display: none; 
+    }
+}

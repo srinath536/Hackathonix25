@@ -1,0 +1,52 @@
+.footer {
+    background-color: #2e3d49;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0; /* Reduced padding to make it more compact */
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;  /* Or position: absolute if it needs to stay at the bottom */
+    margin-top: 50px; /* Add a margin to prevent overlap */
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer-text {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: 400;
+  }
+  
+  .social-links {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+  }
+  
+  .social-icon {
+    color: white;
+    font-size: 1.8rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .social-icon:hover {
+    color: #c8f560; /* Hover effect color */
+  }
+  
+  @media (max-width: 768px) {
+    .footer-text {
+      font-size: 1rem;
+    }
+  
+    .social-icon {
+      font-size: 1.5rem;
+    }
+  }
+  
