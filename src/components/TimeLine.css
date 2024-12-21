@@ -1,0 +1,52 @@
+/* Timeline Section */
+.timeline-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh; /* Adjust the height as required */
+    width: 97%; /* Full width */
+    background-color: white; /* White background color */
+    border-radius: 40px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Slight box shadow */
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Overlay Section */
+.timeline-overlay {
+    z-index: 2; /* Ensures overlay content is on top */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers content horizontally */
+    justify-content: center; /* Centers content vertically */
+}
+
+/* Timeline Title */
+.timeline-overlay h1 {
+    font-family: "Anton", sans-serif;
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #2b1224; /* Text color */
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Timeline Image */
+.timeline-image {
+    width: 60%; /* Adjust width as required */
+    height: auto;
+    border-radius: 10px;  /* Optional: rounded corners for the image */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Optional: shadow for the image */
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+    .timeline-overlay h1 {
+        font-size: 2.5rem; /* Adjust title size for smaller screens */
+    }
+
+    .timeline-image {
+        width: 80%; /* Make image smaller on mobile screens */
+    }
+}

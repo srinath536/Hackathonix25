@@ -1,0 +1,90 @@
+/* Core Members Section Styling */
+.mainContainer {
+    background-color: white;
+    padding: 20px 0;
+    box-sizing: border-box;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Core Members Heading */
+.core-members-heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #2b1224;
+    margin-bottom: 30px;
+}
+
+/* Individual Member Card */
+.container {
+    padding: 10px;
+}
+
+/* Member Card Styling */
+.member-card {
+    text-align: center;
+    padding: 10px;
+    width: 180px; /* Increase card size to fit better */
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect on member card */
+.member-card:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* Member Image Styling */
+.member-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #310e68;
+    margin: 0 auto;
+}
+
+/* Member Info (Name & Year) */
+.member-info {
+    margin-top: 10px;
+}
+
+.member-name {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #310e68;
+}
+
+.member-year {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Slider Styling */
+.slick-slide {
+    display: flex !important;
+    justify-content: center;
+}
+
+/* Additional Slider settings */
+.slick-prev, .slick-next {
+    display: none !important;  /* Remove the arrows completely */
+}
+
+/* Ensure no horizontal scrollbar appears */
+.slick-list {
+    margin: 0 auto;   /* Center the content */
+    overflow: hidden;  /* Prevent horizontal scroll */
+    padding: 10px 0;  /* Optional: Adjust for better appearance */
+}
+
+/* Hide the dots and controls completely */
+.slick-dots {
+    display: none !important;
+}

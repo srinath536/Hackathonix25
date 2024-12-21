@@ -1,0 +1,107 @@
+/* About Us Section */
+.about-us-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Align entire content vertically */
+    height: 70vh;
+    width: 97%; /* Full width */
+    max-width: 100%; /* Ensure it spans the full width */
+    margin: 0 auto;
+    background-color: #2b1224; /* Changed to white background */
+    border-radius: 40px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Slight box shadow */
+    text-align: center;
+    overflow: hidden;
+    position: relative; /* Allows stacking elements with z-index */
+    border: 2px solid transparent;
+    background-clip: padding-box;
+}
+
+/* Wrapper for text and slider */
+.about-us-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 100%;
+    
+}
+
+/* Text Section */
+.about-us-text {
+    width: 50%;
+    color: white;
+    text-align: left;
+    margin-top: 100px; /* Moves the content down */
+    transform: translateX(-280px); /* Moves the content to the left */
+}
+
+.about-us-text h1 {
+    font-family: "Anton", sans-serif;
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.about-us-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 90%;
+}
+
+/* Slider Section */
+.about-us-slider {
+    width: 45%;
+    background-color: white;
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.slider-item {
+    text-align: center;
+}
+
+.staff-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0 auto 10px;
+}
+
+.staff-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #2b1224;
+}
+
+.staff-profession {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .about-us-content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about-us-text, .about-us-slider {
+        width: 100%;
+    }
+
+    .about-us-slider {
+        margin-top: 20px;
+    }
+
+    .about-us-text h1 {
+        font-size: 2rem;
+    }
+
+    .about-us-text p {
+        font-size: 1rem;
+    }
+}

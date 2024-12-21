@@ -1,11 +1,41 @@
+html {
+    scroll-behavior: smooth;
+  }
+  
+
 body {
     margin: 0;
     padding: 0;
-    background-color: black;
+    background-color: #efeefb;
     min-height: 100vh;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-y: scroll; /* Always show vertical scrollbar */
 }
+
+/* Ensures div doesn't overflow horizontally */
 div {
     display: flex;
     flex-direction: column;
-    flex-grow: 1; /* Content area takes up available space */
-  }
+    flex-grow: 1;
+    overflow-x: hidden; /* Ensure content doesn't overflow horizontally */
+}
+
+/* Customize the scrollbar */
+::-webkit-scrollbar {
+    width: 12px; /* Width of the vertical scrollbar */
+    height: 12px; /* Height of the horizontal scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background-color: #efeefb;  /* Scrollbar track color */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #2b1224;  /* Scrollbar thumb color */
+    border-radius: 10px;  /* Optional: round corners on the thumb */
+}
+
+/* Optional: Add hover effect to the scrollbar thumb */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Change color on hover */
+}

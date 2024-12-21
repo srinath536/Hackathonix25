@@ -4,16 +4,14 @@ import './HeroSection.css';
 const HeroSection: React.FC = () => {
   return (
     <section className="hero-section">
-      {/* Video background */}
-      <video className="hero-video" autoPlay loop muted>
-        <source src="src/assets/hk251.mp4" type="video/mp4" />
-      </video>
-
-      {/* Overlay content */}
+      <img
+        className="hero-image"
+        src="src/assets/hc25.png"
+        alt="Hackathonix Hero Background"
+      />
       <div className="hero-overlay">
-        <h1> Hackathonix 25</h1>
-
-        {/* Register Now button */}
+        <h1>Hackathonix 25</h1>
+        <p>"Innovation starts here-build ideas, inspire change, and shape what's to come."</p>
         <button className="register-btn">Register Now</button>
       </div>
     </section>

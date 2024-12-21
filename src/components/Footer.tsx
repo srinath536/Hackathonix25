@@ -1,19 +1,18 @@
 import React from 'react';
-import './Footer.css'; // Import the footer-specific CSS file
+import './Footer.css';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="footer">
+    <div className="footer-container">
       <div className="footer-content">
-        <p className="footer-text">Hackathonix 25 &copy; All Rights Reserved</p>
-        <div className="social-links">
-          <a href="https://facebook.com" className="social-icon" target="_blank" rel="noopener noreferrer">F</a>
-          <a href="https://twitter.com" className="social-icon" target="_blank" rel="noopener noreferrer">T</a>
-          <a href="https://linkedin.com" className="social-icon" target="_blank" rel="noopener noreferrer">L</a>
-          <a href="https://instagram.com" className="social-icon" target="_blank" rel="noopener noreferrer">I</a>
+        <p>&copy; 2024 All Rights Reserved.</p>
+        <div className="contact-us">
+          <h3>Contact Us:</h3>
+          <p>Email: contact@company.com</p>
+          <p>Phone: +1234567890</p>
         </div>
       </div>
-    </footer>
+    </div>
   );
 };
 
