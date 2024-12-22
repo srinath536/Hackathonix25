@@ -1,37 +1,50 @@
-
+/* Promo Section */
 .promo-section {
-  background-color: #2b1224; /* Dark background color */
-  color: white; /* Make text white */
-  padding: 15px 20px; /* Adjusted padding for better visibility */
+  background: rgba(255, 255, 255, 0); /* Gradient background */
+  color: white; /* White text */
+  backdrop-filter: blur(10px); /* Glass effect */
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+  padding: 15px 20px;
   text-align: center;
-  font-family: "Bruno Ace", sans-serif;
-  font-size: 1.2rem;
+  font-family: "VT323", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.4rem;
   font-weight: lighter;
-  z-index: 10; /* Ensures it stays above other elements */
+  z-index: 100; /* Above the header */
   position: relative;
-  width: 100%; /* Ensures the promo spans the full width */
-  margin-bottom: 0; /* Space between promo and header */
+  top: 0;
+  width: 100%;
+  margin-bottom: 0; /* No extra space below */
+  height: auto; /* Adjust height dynamically */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
 }
+
 
 /* Header */
 .header {
   display: flex;
   justify-content: space-between;
-  padding: 20px 46px 20px 36px;
-  position: relative;
-  z-index: 5;
-  width: 100%; /* Full width */
   align-items: center;
+  padding: 20px 46px 20px 36px;
+  position: relative; /* Fixed position below promo-section */
+  top: 0px; /* Offset from promo-section */
+  z-index: 99; /* Below promo-section */
+  width: 100%;
   box-sizing: border-box;
-  margin: 0; /* No margin, the promo section already takes space */
-  background-color: #efeefb; /* Light background color */
-  
+  background-color: rgba(255, 255, 255, 0); /* Fully transparent background */
+  backdrop-filter: blur(10px); /* Glass effect */
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0); /* No shadow initially */
+  transition: none; /* Removed the transition for a fixed header */
 }
 
-/* Logo Styles */
+/* Logo */
 .logo {
   font-family: "Bruno Ace", sans-serif;
-  color: #2b1224;
+  color: whitesmoke;
   font-size: 1.8rem;
   font-weight: bold;
   transition: transform 0.2s ease-in-out;
@@ -41,44 +54,55 @@
   transform: scale(1.1);
 }
 
-/* Navigation Styles */
-
+/* Navigation */
 .navigation {
   display: flex;
-  justify-content: space-evenly; /* Equal spacing between navigation items */
+  justify-content: space-between;
   align-items: center;
-  width: 100%; /* Ensure the navigation spans the width */
 }
 
 .navigation ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
   display: flex;
-  gap: 1rem;  /* Ensures navigation items are aligned in a row */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1rem;
 }
 
 .navigation li {
-  font-family: "Bruno Ace", sans-serif;
-  display: inline-block;
-  padding: 10px 15px; /* Added padding for clickable area */
-  border-radius: 12px; /* Rounded corners */
-  background-color: #d3d3d3; /* Default grey background */
-  color: black; /* Default black text color */
+  font-family: "VT323", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.5rem;
+  padding: 10px 15px;
+  border-radius: 8px;
   transition: transform 0.2s ease-in-out, background-color 0.3s ease, color 0.3s ease;
-  cursor: pointer; 
+  color: whitesmoke;
+  cursor: pointer;
 }
 
 .navigation li:hover {
-  transform: translateY(-0.3rem); 
-  background-color: #2b1224; /* Violet background on hover */
-  color: white; /* White text on hover */
+  transform: translateY(-0.3rem);
+  background-color: transparent;
+  color: white;
 }
 
-
-/* Responsive for mobile */
+/* Mobile Responsive */
 @media (max-width: 900px) {
   .header {
-    display: none;
+    flex-direction: column;
+    padding: 15px 20px;
   }
-}  
+
+  .navigation ul {
+    flex-wrap: wrap; /* Adjust for smaller screens */
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .promo-section {
+    font-size: 1rem; /* Adjust font size for mobile */
+    height: auto; /* Allow dynamic height */
+    padding: 10px;
+  }
+}

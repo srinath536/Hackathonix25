@@ -1,7 +1,8 @@
-import { useState, useEffect } from 'react';
-import './Header.css';
+import { useState, useEffect } from "react";
+import "./Header.css";
 
 const Header = () => {
+  // Countdown Logic
   const calculateCountdown = () => {
     const eventDate = new Date("February 27, 2025 00:00:00").getTime();
     const currentTime = new Date().getTime();
@@ -10,16 +11,18 @@ const Header = () => {
     const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
     const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
-    return { days, hours, minutes };
+    return { days, hours, minutes, seconds };
   };
 
-  const [countdown, setCountdown] = useState(calculateCountdown);
+  const [countdown, setCountdown] = useState(calculateCountdown());
 
+  // Update countdown every second
   useEffect(() => {
     const timer = setInterval(() => {
       setCountdown(calculateCountdown());
-    }, 60000); // Update the countdown every minute
+    }, 1000);
 
     return () => clearInterval(timer); // Cleanup interval on unmount
   }, []);
@@ -28,7 +31,9 @@ const Header = () => {
     <div>
       {/* Promo Section */}
       <div className="promo-section">
-        <span>Event Starts in: {countdown.days} days, {countdown.hours} hours, {countdown.minutes} minutes</span>
+        <span>
+          Event Starts in: {countdown.days} days, {countdown.hours} hours, {countdown.minutes} minutes, {countdown.seconds} seconds
+        </span>
       </div>
 
       {/* Header Section */}

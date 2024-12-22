@@ -13,7 +13,7 @@ return (
   <div>
       <Header/>
       <HeroSection/>
-      <AboutUs/>
+    <AboutUs/>
       <TimeLine/>
       <Sponsors/>
       <Prizes/>
