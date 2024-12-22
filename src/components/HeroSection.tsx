@@ -1,4 +1,5 @@
 import React from 'react';
+import heroImage from '../assets/hc25.png';
 import './HeroSection.css';
 
 const HeroSection: React.FC = () => {
@@ -6,7 +7,7 @@ const HeroSection: React.FC = () => {
     <section className="hero-section">
       <img
         className="hero-image"
-        src="src/assets/hc25.png"
+        src={heroImage}
         alt="Hackathonix Hero Background"
       />
       <div className="hero-overlay">
