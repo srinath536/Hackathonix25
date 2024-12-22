@@ -1,0 +1,106 @@
+.book {
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+    height: 70vh;
+    background-color: black;
+    box-shadow: 1px 1px 12px #000;
+    transform: preserve-3d;
+    perspective: 2000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    overflow: hidden;
+}
+
+.cover {
+    top: 0;
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.5s;
+    transform-origin: 0;
+    box-shadow: 1px 1px 12px #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.book:hover .cover {
+    transition: all 0.5s;
+    transform: rotatey(-80deg);
+}
+
+p {
+    color: white;
+    font-weight: bolder;
+    font-family: "VT323", serif;
+    font-style: normal;
+    font-size: 5rem;
+    text-align: center; /* Ensures text is centered on small screens */
+}
+
+/* Download Button */
+.download-button {
+    position: absolute;
+    top: 45%;
+    padding: 15px 40px;
+    background-color: black;
+    color: white;
+    font-family: "VT323", serif;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    border: 2px solid white;
+    border-radius: 25px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.download-button:hover {
+    background-color: white;
+    color: black;
+    border-color: black;
+}
+
+/* Optionally, add focus style to improve accessibility */
+.download-button:focus {
+    outline: none;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    .book {
+        height: 50vh;  /* Adjust height for smaller screens */
+    }
+
+    p {
+        font-size: 3rem; /* Make the text smaller on small screens */
+    }
+
+    .download-button {
+        font-size: 1.2rem;
+        top: 55%; /* Adjust position of button */
+    }
+}
+
+@media (max-width: 480px) {
+    .book {
+        height: 40vh; /* Further adjust the height for mobile screens */
+    }
+
+    p {
+        font-size: 2.5rem; /* Reduce text size further */
+    }
+
+    .download-button {
+        font-size: 1rem;
+        padding: 10px 30px;
+        top: 50%; /* Move button further down */
+    }
+}

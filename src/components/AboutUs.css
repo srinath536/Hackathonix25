@@ -8,14 +8,37 @@
     width: 97%; /* Full width */
     max-width: 100%; /* Ensure it spans the full width */
     margin: 0 auto;
-    background-color: #2b1224; /* Changed to white background */
-    border-radius: 40px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Slight box shadow */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.4); /* Transparent background */
+    border-radius: 40px; /* Rounded corners */
+    border: 2px solid ; /* Set custom border color */
     text-align: center;
     overflow: hidden;
     position: relative; /* Allows stacking elements with z-index */
-    border: 2px solid transparent;
-    background-clip: padding-box;
+    box-shadow: 0 0 30px 4px #591002, 0 0 30px 8px #5D4604; /* Glowing effect with two gradients */
+    
+}
+.about-hack-section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit; /* Use the same image as the background */
+    filter: blur(15px) brightness(0.8); /* Increase blur and dim brightness */
+    z-index: 1; /* Push it below content */
+    border-radius: inherit;
+}
+.about-hack-content {
+    position: relative; /* Above blurred background */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 100%;
+    padding: 0 20px;
+    z-index: 2; /* Ensure it's above the blurred layer */
 }
 
 /* Wrapper for text and slider */
