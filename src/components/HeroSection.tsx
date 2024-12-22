@@ -1,6 +1,6 @@
 import React from 'react';
 import './HeroSection.css';
-import heroVideo from '../assets/bg2.mp4'; 
+import heroVideo from '../assets/bg3.mp4'; 
 
 const HeroSection: React.FC = () => {
   return (

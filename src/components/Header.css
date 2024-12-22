@@ -88,16 +88,10 @@
 }
 
 /* Mobile Responsive */
+/* Mobile Responsive */
 @media (max-width: 900px) {
   .header {
-    flex-direction: column;
-    padding: 15px 20px;
-  }
-
-  .navigation ul {
-    flex-wrap: wrap; /* Adjust for smaller screens */
-    justify-content: center;
-    gap: 0.5rem;
+    display: none; /* Hide header on small devices */
   }
 
   .promo-section {
@@ -105,4 +99,17 @@
     height: auto; /* Allow dynamic height */
     padding: 10px;
   }
+
+  
 }
+
+/* Further adjustment for extra small screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .promo-section {
+    font-size: 0.9rem; /* Further adjust font size for very small devices */
+    padding: 10px 15px;
+  }
+
+  
+}
+
