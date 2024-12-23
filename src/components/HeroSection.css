@@ -80,7 +80,7 @@
 @media (max-width: 480px) {
   .hero-section {
     height: 100vh; /* Adjust to full screen height */
-    margin-top: 0; /* Remove unnecessary margin */
+    margin-top: -25px; /* Remove unnecessary margin */
     padding-top: 0; /* Remove padding for better fit */
   }
 
@@ -90,7 +90,7 @@
   }
 
   .hero-overlay h1 {
-    font-size: 1.95rem; /* Adjust heading size */
+    font-size: 1.75rem; /* Adjust heading size */
     line-height: 1.5; /* Reduce line spacing */
     margin-bottom: 15px; /* Reduce spacing below heading */
   }
