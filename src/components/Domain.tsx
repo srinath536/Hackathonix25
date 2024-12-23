@@ -1,4 +1,3 @@
-import React from "react";
 import "./Domain.css"; // Import the updated CSS
 
 const domains = [
