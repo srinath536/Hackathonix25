@@ -8,12 +8,14 @@ import Header from './components/Header';
 import HeroSection from './components/HeroSection';
 import Prizes from './components/Prizes';
 import Sponsors from './components/Sponsors';
+import Domain from './components/Domain';
 function App() {
 return (
   <div>
       <Header/>
       <HeroSection/>
       <AboutHack/>
+      <Domain/>
       <AboutUs/>
       <Sponsors/>
       <Prizes/>
