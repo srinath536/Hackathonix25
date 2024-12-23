@@ -5,7 +5,7 @@
     height: 70vh;
     background-color: black;
     box-shadow: 1px 1px 12px #000;
-    transform: perspective(2000px); 
+    transform: perspective(2000px); /* Ensure perspective is applied correctly */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -72,19 +72,27 @@ p {
     outline: none;
 }
 
+/* "Click Me!" text */
 .click-me-text {
-    display: none; 
+    display: none; /* Default: Hidden */
     font-family: "VT323", serif;
     font-size: 1rem;
     font-weight: normal;
     color: lightgrey;
     margin-top: 10px;
+    text-align: center;
 }
 
-/* Media Query for smaller screens */
-@media (max-width: 768px) {
+/* Media Queries */
+
+/* For tablets and smaller screens */
+@media (max-width: 1024px) {
     .book {
-        height: 50vh;
+        height: 45vh; /* Reduced height for tablets */
+    }
+
+    .cover {
+        height: 45vh; /* Keep consistent with book height */
     }
 
     p {
@@ -93,26 +101,43 @@ p {
 
     .download-button {
         font-size: 1.2rem;
-        top: 55%;
+        top: 55%; /* Adjust button position */
+    }
+
+    .click-me-text {
+        display: block; /* Show "Click Me!" */
     }
 }
 
+/* For phones */
 @media (max-width: 480px) {
     .book {
-        height: 40vh;
+        height: 35vh; /* Further reduced height for mobile screens */
+    }
+
+    .cover {
+        height: 35vh; /* Keep consistent with book height */
     }
 
     p {
-        font-size: 2.5rem;
+        font-size: 2.5rem; /* Adjust font size */
     }
 
     .download-button {
         font-size: 1rem;
-        padding: 10px 30px;
+        padding: 10px 30px; /* Adjust padding */
         top: 50%;
     }
 
     .click-me-text {
         display: block;
+        font-size: 0.9rem; /* Slightly smaller for mobile */
+    }
+}
+
+/* For laptops and desktops, hide "Click Me!" */
+@media (min-width: 1025px) {
+    .click-me-text {
+        display: none;
     }
 }
