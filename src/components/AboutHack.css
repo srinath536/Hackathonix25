@@ -5,8 +5,7 @@
     height: 70vh;
     background-color: black;
     box-shadow: 1px 1px 12px #000;
-    transform: preserve-3d;
-    perspective: 2000px;
+    transform: perspective(2000px); 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -22,17 +21,19 @@
     height: 100%;
     border-radius: 10px;
     cursor: pointer;
-    transition: all 0.5s;
-    transform-origin: 0;
+    transition: transform 0.5s, opacity 0.5s; 
+    transform-origin: left; 
+    transform: rotateY(0deg); 
     box-shadow: 1px 1px 12px #000;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
 .book:hover .cover {
-    transition: all 0.5s;
-    transform: rotatey(-80deg);
+    transform: rotateY(-90deg);
+    opacity: 0; 
 }
 
 p {
@@ -41,10 +42,9 @@ p {
     font-family: "VT323", serif;
     font-style: normal;
     font-size: 5rem;
-    text-align: center; /* Ensures text is centered on small screens */
+    text-align: center;
 }
 
-/* Download Button */
 .download-button {
     position: absolute;
     top: 45%;
@@ -68,39 +68,51 @@ p {
     border-color: black;
 }
 
-/* Optionally, add focus style to improve accessibility */
 .download-button:focus {
     outline: none;
+}
+
+.click-me-text {
+    display: none; 
+    font-family: "VT323", serif;
+    font-size: 1rem;
+    font-weight: normal;
+    color: lightgrey;
+    margin-top: 10px;
 }
 
 /* Media Query for smaller screens */
 @media (max-width: 768px) {
     .book {
-        height: 50vh;  /* Adjust height for smaller screens */
+        height: 50vh;
     }
 
     p {
-        font-size: 3rem; /* Make the text smaller on small screens */
+        font-size: 3rem;
     }
 
     .download-button {
         font-size: 1.2rem;
-        top: 55%; /* Adjust position of button */
+        top: 55%;
     }
 }
 
 @media (max-width: 480px) {
     .book {
-        height: 40vh; /* Further adjust the height for mobile screens */
+        height: 40vh;
     }
 
     p {
-        font-size: 2.5rem; /* Reduce text size further */
+        font-size: 2.5rem;
     }
 
     .download-button {
         font-size: 1rem;
         padding: 10px 30px;
-        top: 50%; /* Move button further down */
+        top: 50%;
+    }
+
+    .click-me-text {
+        display: block;
     }
 }

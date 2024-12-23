@@ -90,13 +90,13 @@
   }
 
   .hero-overlay h1 {
-    font-size: 1.8rem; /* Adjust heading size */
-    line-height: 1.2; /* Reduce line spacing */
+    font-size: 1.95rem; /* Adjust heading size */
+    line-height: 1.5; /* Reduce line spacing */
     margin-bottom: 15px; /* Reduce spacing below heading */
   }
 
   .hero-overlay p {
-    font-size: 0.9rem; /* Adjust paragraph size */
+    font-size: 1.4rem; /* Adjust paragraph size */
     line-height: 1.3; /* Reduce line spacing for better readability */
   }
 

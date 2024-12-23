@@ -8,6 +8,7 @@ const AboutHack = () => {
       </a>
       <div className="cover">
         <p>About Hackathonix</p>
+        <span className="click-me-text">Click Me!</span>
       </div>
     </div>
   );
