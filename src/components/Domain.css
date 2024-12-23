@@ -33,6 +33,7 @@
     grid-template-columns: repeat(4, 1fr); /* 4 columns by default */
     gap: 20px;
     width: 100%;
+    overflow-y: hidden;
   }
   
   /* Card Styles */
@@ -44,7 +45,8 @@
     transition: 0.3s;
     background-color: #000;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    perspective: 1000px; /* Add perspective to give depth for 3D effects */
+    perspective: 1000px;
+    overflow-y: hidden; /* Add perspective to give depth for 3D effects */
   }
   
   /* Card front and back faces */
