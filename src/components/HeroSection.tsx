@@ -3,6 +3,8 @@ import './HeroSection.css';
 import heroVideo from '../assets/bg3.mp4'; 
 
 const HeroSection: React.FC = () => {
+  const googleFormURL = "https://forms.gle/your-google-form-link";  // Replace with your actual Google Form URL
+
   return (
     <section className="hero-section">
       <video
@@ -16,7 +18,10 @@ const HeroSection: React.FC = () => {
       <div className="hero-overlay">
         <h1>Hackathonix 25</h1>
         <p>"Innovation starts here - build ideas, inspire change, and shape what's to come."</p>
-        <button className="register-btn">Register Now</button>
+        {/* Redirect button to Google Form */}
+        <a href={googleFormURL} target="_blank" rel="noopener noreferrer">
+          <button className="register-btn">Register Now</button>
+        </a>
       </div>
     </section>
   );

@@ -28,11 +28,11 @@ div {
 }
 
 ::-webkit-scrollbar-track {
-    background-color: #efeefb;  /* Scrollbar track color */
+    background-color: whitesmoke;  /* Scrollbar track color */
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #2b1224;  /* Scrollbar thumb color */
+    background-color: black;  /* Scrollbar thumb color */
     border-radius: 10px;  /* Optional: round corners on the thumb */
 }
 
