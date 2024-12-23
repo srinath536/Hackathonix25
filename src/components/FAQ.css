@@ -1,66 +1,95 @@
-/* FAQ Section Styling */
 .faq-container {
-    background-color: white;
-    padding: 40px 20px;
-    box-sizing: border-box;
-    margin: 0 auto;
-    width: 100%;
+  width: 97%;
+  max-width: 1200px;
+  background-color: black;
+  color: white;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.faq-title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #f9a602;
+  margin-bottom: 20px;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.faq-item {
+  background-color: #333;
+  padding: 10px;
+  border-radius: 8px;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.faq-item:hover {
+  background-color: #444;
+}
+
+.faq-question {
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.dropdown-icon {
+  margin-right: 10px;  /* Space between the icon and text */
+  font-size: 20px;
+  color: #f9a602;
+}
+
+.faq-answer {
+  font-size: 16px;
+  margin-top: 10px;
+  color: #ccc;
+  padding-left: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .faq-title {
+    font-size: 30px;
   }
-  
-  .faq-heading {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #2b1224;
-    text-align: center;
-    margin-bottom: 40px;
-  }
-  
-  .faq-list {
-    width: 80%;
-    margin: 0 auto;
-  }
-  
-  .faq-item {
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-  }
-  
+
   .faq-question {
-    background-color: #2b1224;
-    color: white;
-    font-size: 1.2rem;
-    padding: 15px;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 10px 10px 0 0;
+    font-size: 16px;
   }
-  
-  .faq-question:hover {
-    background-color: #3b1632;
-  }
-  
-  .faq-toggle {
-    transition: transform 0.3s;
-  }
-  
-  .faq-toggle.open {
-    transform: rotate(180deg); /* Flip the arrow when open */
-  }
-  
+
   .faq-answer {
-    display: none;
-    padding: 10px;
-    background-color: #f9f9f9;
-    font-size: 1rem;
-    border-radius: 0 0 10px 10px;
-    color: #333;
-    transition: max-height 0.3s ease-out;
+    font-size: 14px;
   }
-  
-  .faq-answer.show {
-    display: block;
+
+  .faq-item {
+    padding: 8px;
   }
-  
+}
+
+@media screen and (max-width: 480px) {
+  .faq-title {
+    font-size: 26px;
+  }
+
+  .faq-question {
+    font-size: 14px;
+  }
+
+  .faq-answer {
+    font-size: 12px;
+  }
+
+  .faq-item {
+    padding: 6px;
+  }
+}

@@ -1,20 +1,29 @@
+import React from "react";
+import "./Sponsors.css";
 
-import './Sponsors.css';  // Import the CSS file
-
-const Sponsors = () => {
+const Sponsors: React.FC = () => {
   return (
-    <section className="sponsors-section">
-      <div className="sponsors-overlay">
-        <h1>Our Sponsors</h1>
-        <div className="sponsors-logos">
-          <img src="https://via.placeholder.com/150x50?text=Logo+1" alt="Company Logo 1" className="sponsor-logo" />
-          <img src="https://via.placeholder.com/150x50?text=Logo+2" alt="Company Logo 2" className="sponsor-logo" />
-          <img src="https://via.placeholder.com/150x50?text=Logo+3" alt="Company Logo 3" className="sponsor-logo" />
-          <img src="https://via.placeholder.com/150x50?text=Logo+4" alt="Company Logo 4" className="sponsor-logo" />
+    <div className="sponsors-container">
+      <h1 className="sponsors-title">Our Sponsors</h1>
+      <div className="sponsors-logos">
+        <div className="sponsor-logo">
+          <img src="https://via.placeholder.com/150?text=Google" alt="Google" />
+        </div>
+        <div className="sponsor-logo">
+          <img src="https://via.placeholder.com/150?text=YouTube" alt="YouTube" />
+        </div>
+        <div className="sponsor-logo">
+          <img src="https://via.placeholder.com/150?text=GitHub" alt="GitHub" />
+        </div>
+        <div className="sponsor-logo">
+          <img src="https://via.placeholder.com/150?text=LinkedIn" alt="LinkedIn" />
+        </div>
+        <div className="sponsor-logo center-logo">
+          <img src="https://via.placeholder.com/150?text=Twitter" alt="Twitter" />
         </div>
       </div>
-    </section>
+    </div>
   );
-}
+};
 
 export default Sponsors;

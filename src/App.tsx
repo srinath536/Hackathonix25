@@ -8,15 +8,13 @@ import Header from './components/Header';
 import HeroSection from './components/HeroSection';
 import Prizes from './components/Prizes';
 import Sponsors from './components/Sponsors';
-import TimeLine from './components/TimeLine';
 function App() {
 return (
   <div>
       <Header/>
       <HeroSection/>
       <AboutHack/>
-    <AboutUs/>
-      <TimeLine/>
+      <AboutUs/>
       <Sponsors/>
       <Prizes/>
       <CoreMembers/>

@@ -1,130 +1,28 @@
-/* About Us Section */
-.about-us-section {
+.aboutus-container {
+    width: 97%;
+    height: 90vh;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    margin: auto;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    justify-content: center; /* Align entire content vertically */
-    height: 70vh;
-    width: 97%; /* Full width */
-    max-width: 100%; /* Ensure it spans the full width */
-    margin: 0 auto;
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0, 0.4); /* Transparent background */
-    border-radius: 40px; /* Rounded corners */
-    border: 2px solid ; /* Set custom border color */
-    text-align: center;
-    overflow: hidden;
-    position: relative; /* Allows stacking elements with z-index */
-    box-shadow: 0 0 30px 4px #591002, 0 0 30px 8px #5D4604; /* Glowing effect with two gradients */
-    
-}
-.about-hack-section::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: inherit; /* Use the same image as the background */
-    filter: blur(15px) brightness(0.8); /* Increase blur and dim brightness */
-    z-index: 1; /* Push it below content */
-    border-radius: inherit;
-}
-.about-hack-content {
-    position: relative; /* Above blurred background */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 90%;
-    height: 100%;
-    padding: 0 20px;
-    z-index: 2; /* Ensure it's above the blurred layer */
-}
-
-/* Wrapper for text and slider */
-.about-us-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 90%;
-    height: 100%;
-    
-}
-
-/* Text Section */
-.about-us-text {
-    width: 50%;
-    color: white;
-    text-align: left;
-    margin-top: 100px; /* Moves the content down */
-    transform: translateX(-280px); /* Moves the content to the left */
-}
-
-.about-us-text h1 {
-    font-family: "Anton", sans-serif;
-    font-size: 2.8rem;
-    margin-bottom: 20px;
-    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-.about-us-text p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    max-width: 90%;
-}
-
-/* Slider Section */
-.about-us-slider {
-    width: 45%;
-    background-color: white;
-    border-radius: 15px;
-    padding: 10px;
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
-}
-
-.slider-item {
-    text-align: center;
-}
-
-.staff-image {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    margin: 0 auto 10px;
-}
-
-.staff-name {
-    font-size: 1.2rem;
+    border-radius: 10px;
+  }
+  
+  .aboutus-title {
+    font-size: 36px;
     font-weight: bold;
-    color: #2b1224;
-}
-
-.staff-profession {
-    font-size: 1rem;
-    color: #555;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .about-us-content {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .about-us-text, .about-us-slider {
-        width: 100%;
-    }
-
-    .about-us-slider {
-        margin-top: 20px;
-    }
-
-    .about-us-text h1 {
-        font-size: 2rem;
-    }
-
-    .about-us-text p {
-        font-size: 1rem;
-    }
-}
+    margin-bottom: 20px;
+    color: #ff9900; /* Add a pop of color for the title */
+  }
+  
+  .aboutus-text {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: center;
+    max-width: 800px;
+  }
+  
