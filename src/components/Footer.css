@@ -1,54 +1,132 @@
 /* Footer Container */
 .footer-container {
-    background-color:black;
-    color: white;
-    padding: 30px 0;
-    border-radius: 20px; /* Make the box rounded */
-    width: 100%; /* To prevent it from stretching too much on large screens */
-    margin: 0 auto; /* Center the footer on the page */
-    box-sizing: border-box;
-  }
-  
-  /* Footer Content */
+  background-color: black;
+  color: white;
+  padding: 30px 0;
+  border-radius: 20px; /* Make the box rounded */
+  width: 100%; /* Prevent it from stretching too much on large screens */
+  margin: 0 auto; /* Center the footer on the page */
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+/* Footer Content */
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Hackathonix 25 Heading */
+.hackathon-title {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: white;
+}
+
+/* Contact Us Section */
+.contact-us {
+  margin-top: 15px;
+}
+
+.contact-us h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.contact-us p {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+/* Built By Section */
+.team-members p {
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
+.team-members a {
+  text-decoration: underline;
+  color: white;
+  font-weight: bold;
+  margin: 0 10px;
+}
+
+.team-members a:hover {
+  color: #00bcd4; /* Blue color for hover */
+  transition: 0.3s;
+}
+
+/* Social Media Icons */
+.social-media {
+  margin-top: 15px;
+  display: grid; /* Use grid layout */
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 20px; /* Space between icons */
+  justify-content: center; /* Center align the icons */
+  text-align: center;
+}
+
+.social-icon {
+  font-size: 30px;  /* Adjust the icon size */
+  color: white;  /* Set icon color */
+  cursor: pointer;
+}
+
+.social-icon:hover {
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
+/* College Info Section */
+.college-info p {
+  font-size: 1rem;
+  margin-top: 20px;
+  color: white;
+  font-style: italic;
+}
+
+.college-info .college-link {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.college-info .college-link:hover {
+  text-decoration: underline;
+}
+
+/* All Rights Reserved Section */
+.copyright-section p {
+  font-size: 1rem;
+  margin: 15px 0;
+  font-weight: normal;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column; /* Stack the content vertically on smaller screens */
-    text-align: center;
+    padding: 20px;
   }
-  
-  /* Copyright */
-  .footer-content p {
-    margin: 5px;
-    font-size: 1rem;
+
+  .hackathon-title {
+    font-size: 2rem;
   }
-  
-  /* Contact Us Section */
-  .contact-us {
-    margin-top: 20px;
-  }
-  
+
   .contact-us h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    font-weight: bold;
+    font-size: 1.3rem;
   }
-  
-  /* Phone and Email Text */
-  .contact-us p {
-    font-size: 1rem;
-    margin: 5px 0;
+
+  .social-media {
+    grid-template-columns: 1fr; /* Stack icons in 1 column on smaller screens */
+    margin-top: 10px;
+    grid-template-columns: repeat(2, 1fr);
   }
-  
-  /* Responsive Design: Ensure the footer looks good on all screen sizes */
-  @media (max-width: 768px) {
-    .footer-content {
-      padding: 20px;
-    }
-  
-    .contact-us h3 {
-      font-size: 1.3rem;
-    }
+
+  .social-icon {
+    width: 25px;
+    height: 25px;
   }
-  
+}
