@@ -1,107 +1,111 @@
 .prizes-container {
-    width: 97%;
-    height: 90vh;
-    background-color: black;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    border-radius: 10px;
-    overflow: hidden;
-    position: relative;
+  height: 80vh;
+  width: 97%;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px;
+}
+
+.receipt {
+  background-color: white;
+  width: 70%;
+  max-width: 450px;
+  padding: 15px;
+  border: 2px dashed black;
+  font-family: "VT323", monospace;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.receipt-title {
+  font-size: 1.8rem;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.receipt-detail {
+  font-size: 1rem;
+  margin: 5px 0;
+  color: black;
+}
+
+.receipt-detail span {
+  font-weight: bold;
+}
+
+.receipt-dotted-line {
+  width: 100%;
+  border: none;
+  border-top: 2px dotted black;
+  margin: 15px 0;
+}
+
+.receipt-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns for each item label and value */
+  gap: 10px;
+  width: 100%;
+  font-size: 1rem;
+  margin: 8px 0;
+  align-items: center;  /* Ensures they are vertically aligned */
+}
+
+.item-label {
+  font-weight: bold;
+  text-align: left;
+}
+
+.item-value {
+  font-weight: normal;
+  text-align: right;
+}
+
+.receipt-total {
+  font-size: 1.2rem;
+  text-align: right;
+  width: 100%;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.receipt-footer {
+  font-size: 1rem;
+  text-align: center;
+  width: 100%;
+  font-weight: bold;
+  color: black;
+  margin-top: 20px;
+}
+
+/* Media Query for Small Devices */
+@media screen and (max-width: 600px) {
+
+  .prizes-container {
+    margin-left: 6px;  /* Shift the container slightly to the right */
   }
-  
-  .prizes-heading {
-    font-size: 48px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: #f9a602;
-    animation: bounce 1.5s infinite ease-in-out;
-    text-align: center;
+  .receipt {
+    width: 95%;
   }
-  
-  .prizes-description {
-    font-size: 24px;
-    font-weight: 500;
-    text-align: center;
+
+  .receipt-title {
+    font-size: 3 rem;
   }
-  
-  .prizes-description .highlight {
-    color: #ff6347;
-    font-weight: bold;
-    font-size: 28px;
+
+  .receipt-detail {
+    font-size: 1.3rem;
   }
-  
-  .prizes-animations {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
+
+  .receipt-item {
+    font-size: 1.5rem;
   }
-  
-  .sparkle {
-    width: 10px;
-    height: 10px;
-    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 70%);
-    border-radius: 50%;
-    position: absolute;
-    animation: sparkle-animation 2s infinite;
+
+  .receipt-total {
+    font-size: 1.7rem;
   }
-  
-  .sparkle:nth-child(1) {
-    top: 20%;
-    left: 15%;
-    animation-delay: 0s;
-  }
-  
-  .sparkle:nth-child(2) {
-    top: 50%;
-    left: 25%;
-    animation-delay: 0.3s;
-  }
-  
-  .sparkle:nth-child(3) {
-    top: 80%;
-    left: 40%;
-    animation-delay: 0.6s;
-  }
-  
-  .sparkle:nth-child(4) {
-    top: 30%;
-    left: 70%;
-    animation-delay: 0.9s;
-  }
-  
-  .sparkle:nth-child(5) {
-    top: 70%;
-    left: 85%;
-    animation-delay: 1.2s;
-  }
-  
-  /* Keyframes for bounce animation */
-  @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-      transform: translateY(0);
-    }
-    40% {
-      transform: translateY(-20px);
-    }
-    60% {
-      transform: translateY(-10px);
-    }
-  }
-  
-  /* Keyframes for sparkles */
-  @keyframes sparkle-animation {
-    0%, 100% {
-      transform: scale(0) translateY(0);
-      opacity: 0;
-    }
-    50% {
-      transform: scale(1.5) translateY(-10px);
-      opacity: 1;
-    }
-  }
-  
+}

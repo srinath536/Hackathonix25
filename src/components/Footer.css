@@ -38,24 +38,26 @@
 
 .contact-us h3 {
   font-size: 1.5rem;
-  font-weight: bold;
+  font-weight: 300;
 }
 
 .contact-us p {
   font-size: 1rem;
   margin: 5px 0;
+  font-weight: 300;
 }
 
 /* Built By Section */
 .team-members p {
   font-size: 1rem;
   margin: 10px 0;
+  font-weight: 300;
 }
 
 .team-members a {
   text-decoration: underline;
   color: white;
-  font-weight: bold;
+  font-weight: 300;
   margin: 0 10px;
 }
 
@@ -90,12 +92,13 @@
   font-size: 1rem;
   margin-top: 20px;
   color: white;
-  font-style: italic;
+  font-style: normal;
+  font-weight: 300;
 }
 
 .college-info .college-link {
   color: white;
-  font-weight: bold;
+  font-weight: 300;
   text-decoration: none;
 }
 

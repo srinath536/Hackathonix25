@@ -23,9 +23,9 @@ const Footer: React.FC = () => {
         <div className="team-members">
           <p>
             Built by{' '}
-            <a href="https://www.linkedin.com/in/srinath-profile/" target="_blank" rel="noopener noreferrer">Srinath S</a> 
-            and 
-            <a href="https://www.linkedin.com/in/karthikeyan-profile/" target="_blank" rel="noopener noreferrer">Karthikeyan</a>
+            <a href="https://www.linkedin.com/in/srinath-s-75b470288/" target="_blank" rel="noopener noreferrer">Srinath S</a> 
+            &
+            <a href="https://www.linkedin.com/in/karthikeyan-r-14804a32b/" target="_blank" rel="noopener noreferrer">Karthikeyan</a>
           </p>
         </div>
 

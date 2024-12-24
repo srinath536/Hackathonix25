@@ -16,9 +16,9 @@ return (
       <HeroSection/>
       <AboutHack/>
       <Domain/>
+      <Prizes/>
       <AboutUs/>
       <Sponsors/>
-      <Prizes/>
       <CoreMembers/>
       <FAQ/>
       <Footer/>
