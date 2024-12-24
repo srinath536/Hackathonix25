@@ -8,7 +8,7 @@
 /* Container Styles for the whole section */
 .container {
   width: 97%;
-  height: 80vh;
+  height: auto; /* Allow container height to adjust based on content */
   background-color: black;
   display: flex;
   flex-direction: column;
@@ -45,14 +45,14 @@
   width: 250px;
   height: 350px;
   border-radius: 6px;
-  transition: 0.3s;
   background-color: #000;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   perspective: 1000px;
   overflow: hidden;
+  transition: transform 0.6s;
 }
 
-/* Card front and back faces */
+/* Front and back faces of the card */
 .card .card-front,
 .card .card-back {
   position: absolute;
@@ -62,35 +62,37 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   border-radius: 6px;
   font-size: 18px;
   padding: 0;
-  text-align: center;
   transition: transform 0.6s;
   overflow: hidden;
 }
 
-/* Front face */
+/* Front face styles */
 .card-front {
   background-color: #000;
-  z-index: 1;
+  z-index: 2; /* Keep front face in front initially */
   color: white;
+  flex-direction: column; /* Stack logo and title */
+  padding: 10px;
 }
 
-/* Back face */
+/* Back face styles */
 .card-back {
   background-color: #fff;
   color: black;
-  transform: rotateY(180deg);
+  transform: rotateY(180deg); /* Initially rotate back face */
 }
 
-/* Hover effect to flip the card */
+/* Add hover effect to flip card */
 .card:hover .card-front {
-  transform: rotateY(180deg);
+  transform: rotateY(180deg); /* Rotate front to back */
 }
 
 .card:hover .card-back {
-  transform: rotateY(0);
+  transform: rotateY(0); /* Rotate back to front */
 }
 
 /* Title and description */
@@ -98,13 +100,22 @@
   font-size: 24px;
   font-weight: bold;
   color: white;
+  margin-top: 20px; /* Adjust as needed */
 }
 
+/* Description text on back */
 .card-description {
   font-size: 16px;
   font-weight: normal;
   opacity: 0.7;
   color: black;
+}
+
+/* Style for logo inside card-front */
+.card-logo {
+  width: 100px; /* Adjust based on the size of your logo */
+  height: auto;
+  margin-bottom: 20px; /* Space between the logo and the title */
 }
 
 /* Scrolling effect for small devices */
@@ -118,12 +129,14 @@
   .card-container {
     grid-template-columns: repeat(2, 1fr);
     margin: 0 auto;
+    height: auto; /* Ensure all content fits */
   }
 
   /* Adjust heading size on tablet screens */
   .heading {
     font-size: 3rem;
   }
+  
 }
 
 @media screen and (max-width: 600px) {
@@ -131,6 +144,7 @@
   .card-container {
     grid-template-columns: 1fr;
     margin: 0 auto;
+    height: auto; /* Ensure content doesn't get cut off */
   }
 
   /* Adjust heading size on small screens */
@@ -143,6 +157,6 @@
   /* Adjust card dimensions for small screens */
   .card {
     width: 90%;
-    height: auto;
+    height: 400px; /* Specify a min height for small devices to ensure cards don't collapse */
   }
 }

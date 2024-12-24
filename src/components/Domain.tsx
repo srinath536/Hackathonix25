@@ -1,10 +1,30 @@
 import "./Domain.css"; // Import the updated CSS
+import appdevLogo from "../assets/appdev.png"; 
+import ai from "../assets/ai.png";
+import iot from "../assets/iot.png";
+import cyber from "../assets/cyber.png";
 
 const domains = [
-  { title: "AI", description: "Artificial Intelligence (AI) is about creating systems that can perform tasks that typically require human intelligence, such as image recognition and decision-making." },
-  { title: "ML", description: "Machine Learning (ML) is a subset of AI focused on building algorithms and models that allow computers to learn and make predictions from data." },
-  { title: "Full Stack", description: "Full Stack development involves working on both the front-end and back-end of web applications, using technologies like JavaScript, HTML, CSS, Node.js, and more." },
-  { title: "UI/UX", description: "UI/UX design focuses on creating user-friendly interfaces (UI) and optimizing the overall user experience (UX) of applications and websites." }
+  { 
+    title: "App & Web Development", 
+    description: "Artificial Intelligence (AI) is about creating systems that can perform tasks that typically require human intelligence, such as image recognition and decision-making.",
+    logo: appdevLogo 
+  },
+  { 
+    title: "Cyber Security", 
+    description: "Machine Learning (ML) is a subset of AI focused on building algorithms and models that allow computers to learn and make predictions from data.",
+    logo: cyber
+  },
+  { 
+    title: "AI & ML", 
+    description: "Full Stack development involves working on both the front-end and back-end of web applications, using technologies like JavaScript, HTML, CSS, Node.js, and more.",
+    logo: ai
+  },
+  { 
+    title: "IOT & Hardware", 
+    description: "UI/UX design focuses on creating user-friendly interfaces (UI) and optimizing the overall user experience (UX) of applications and websites.",
+    logo: iot
+  }
 ];
 
 const Domain = () => {
@@ -15,6 +35,8 @@ const Domain = () => {
         {domains.map((domain, index) => (
           <div key={index} className="card">
             <div className="card-front">
+              {/* Place the logo in the front */}
+              <img src={domain.logo} alt={`${domain.title} logo`} className="card-logo" />
               <p className="card-title">{domain.title}</p>
             </div>
             <div className="card-back">
