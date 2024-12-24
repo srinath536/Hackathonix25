@@ -1,126 +1,148 @@
 /* Global styles to reset defaults */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* Container Styles for the whole section */
-  .container {
-    width: 97%;
-    height: 100vh;
-    background-color: #000; /* Container with a black background */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    justify-content: flex-start; /* Align at the top */
-  }
-  
-  /* Heading style */
-  .heading {
-    margin-bottom: 30px;
-    color: white;
-    font-family: "VT323", serif;
-    font-style: normal;
-    font-size: 5rem;
-    
-  }
-  
-  /* Card container */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Container Styles for the whole section */
+.container {
+  width: 97%;
+  height: 80vh;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  justify-content: flex-start;
+  margin-left: 20px;
+}
+
+/* Heading style */
+.heading {
+  margin-bottom: 30px;
+  color: white;
+  font-family: "VT323", serif;
+  font-style: normal;
+  font-size: 5rem;
+  text-align: center; /* Center-align the heading */
+  width: 100%; /* Ensure heading width is 100% of its container */
+}
+
+/* Card container */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns by default */
+  gap: 20px;
+  width: 100%;
+  overflow-y: hidden;
+  margin-left: 65px;
+}
+
+/* Card Styles */
+.card {
+  position: relative;
+  width: 250px;
+  height: 350px;
+  border-radius: 6px;
+  transition: 0.3s;
+  background-color: #000;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  perspective: 1000px;
+  overflow: hidden;
+}
+
+/* Card front and back faces */
+.card .card-front,
+.card .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  font-size: 18px;
+  padding: 0;
+  text-align: center;
+  transition: transform 0.6s;
+  overflow: hidden;
+}
+
+/* Front face */
+.card-front {
+  background-color: #000;
+  z-index: 1;
+  color: white;
+}
+
+/* Back face */
+.card-back {
+  background-color: #fff;
+  color: black;
+  transform: rotateY(180deg);
+}
+
+/* Hover effect to flip the card */
+.card:hover .card-front {
+  transform: rotateY(180deg);
+}
+
+.card:hover .card-back {
+  transform: rotateY(0);
+}
+
+/* Title and description */
+.card-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+.card-description {
+  font-size: 16px;
+  font-weight: normal;
+  opacity: 0.7;
+  color: black;
+}
+
+/* Scrolling effect for small devices */
+.card.scrolled {
+  transform: scale(1.1);
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 1024px) {
+  /* For medium-sized screens like tablets, 2 columns */
   .card-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 columns by default */
-    gap: 20px;
-    width: 100%;
-    overflow-y: hidden;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 auto;
   }
-  
-  /* Card Styles */
+
+  /* Adjust heading size on tablet screens */
+  .heading {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  /* For smaller screens like mobile, stack cards vertically */
+  .card-container {
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+  }
+
+  /* Adjust heading size on small screens */
+  .heading {
+    font-size: 2.5rem;
+    width: 100%; 
+    margin-right: 23px; /* Optionally, adjust width for better centering */
+  }
+
+  /* Adjust card dimensions for small screens */
   .card {
-    position: relative;
-    width: 250px;
-    height: 350px;
-    border-radius: 6px;
-    transition: 0.3s;
-    background-color: #000;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    perspective: 1000px;
-    overflow-y: hidden; /* Add perspective to give depth for 3D effects */
+    width: 90%;
+    height: auto;
   }
-  
-  /* Card front and back faces */
-  .card .card-front,
-  .card .card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden; /* Hide the back content when it's flipped */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 6px;
-    font-size: 18px;
-    padding: 20px;
-    text-align: center;
-    transition: transform 0.6s;
-  }
-  
-  /* Front face */
-  .card-front {
-    background-color: #000;
-    z-index: 1;
-    color: white; /* Front text color white */
-  }
-  
-  /* Back face */
-  .card-back {
-    background-color: #fff;
-    color: black; /* Back text color black */
-    transform: rotateY(180deg);
-  }
-  
-  /* Hover effect to flip the card */
-  .card:hover .card-front {
-    transform: rotateY(180deg);
-  }
-  
-  .card:hover .card-back {
-    transform: rotateY(0);
-  }
-  
-  /* Title and description */
-  .card-title {
-    font-size: 24px;
-    font-weight: bold;
-    color: white; /* Title color set to white */
-  }
-  
-  .card-description {
-    font-size: 16px;
-    font-weight: normal;
-    opacity: 0.7;
-    color: black; /* Description color set to black */
-  }
-  
-  /* Responsive adjustments */
-  @media screen and (max-width: 1024px) {
-    /* For medium-sized screens like tablets, 2 columns */
-    .card-container {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  
-  @media screen and (max-width: 600px) {
-    /* For smaller screens like mobile, stack cards vertically */
-    .card-container {
-      grid-template-columns: 1fr; /* Single column */
-    }
-  
-    /* Adjust card dimensions for small screens */
-    .card {
-      width: 90%; /* Make cards wider to fit small screens */
-      height: auto; /* Allow height to adjust based on content */
-    }
-  }
-  
+}
