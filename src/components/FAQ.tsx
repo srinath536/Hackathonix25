@@ -1,52 +1,60 @@
-import React, { useState } from "react";
-import { FaChevronRight, FaChevronDown } from "react-icons/fa"; // Right and Down icons
+// FAQ.tsx
+import React from "react";
 import "./FAQ.css";
 
 const FAQ: React.FC = () => {
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
-
-  const toggleAccordion = (index: number) => {
-    setActiveIndex((prevIndex) => (prevIndex === index ? null : index));
-  };
-
-  const faqs = [
-    {
-      question: "What is Hackathonix?",
-      answer: "Hackathonix is an annual hackathon that brings together developers, designers, and innovators to collaborate and build cutting-edge projects.",
-    },
-    {
-      question: "Who can participate in the hackathon?",
-      answer: "Anyone with a passion for technology and problem-solving can participate, regardless of skill level or experience.",
-    },
-    {
-      question: "How do I register for the event?",
-      answer: "You can register for Hackathonix on our official website by filling in your details and selecting your team members.",
-    },
-    {
-      question: "What technologies are allowed in the hackathon?",
-      answer: "All technologies, frameworks, and languages are welcome, so feel free to bring your creativity and skills to the table!",
-    },
-    {
-      question: "Is there a prize pool?",
-      answer: "Yes! We have an exciting cash prize pool and various other rewards for the winners and exceptional projects.",
-    },
-  ];
-
   return (
-    <div className="faq-container">
-      <h1 className="faq-title">Frequently Asked Questions</h1>
-      <div className="faq-list">
-        {faqs.map((faq, index) => (
-          <div key={index} className="faq-item">
-            <div className="faq-question" onClick={() => toggleAccordion(index)}>
-              <span className="dropdown-icon">
-                {activeIndex === index ? <FaChevronDown /> : <FaChevronRight />}
-              </span>
-              {faq.question}
-            </div>
-            {activeIndex === index && <div className="faq-answer">{faq.answer}</div>}
-          </div>
-        ))}
+    <div className="accordion">
+      <h1>Frequently Asked Questions</h1>
+
+      <div className="accordion-item">
+        <input type="checkbox" id="accordion1" />
+        <label htmlFor="accordion1" className="accordion-item-title">
+          <span className="icon"></span>What is Hackathon 2025?
+        </label>
+        <div className="accordion-item-desc">
+          Hackathon 2025 is a 48-hour event where developers, designers, and innovators come together to collaborate, compete, and build innovative tech solutions. Participants will work in teams to develop solutions for various challenges.
+        </div>
+      </div>
+
+      <div className="accordion-item">
+        <input type="checkbox" id="accordion2" />
+        <label htmlFor="accordion2" className="accordion-item-title">
+          <span className="icon"></span>How do I register for Hackathon 2025?
+        </label>
+        <div className="accordion-item-desc">
+          You can register for the Hackathon 2025 event by visiting our official registration page on the website. The registration form will collect your details and select your preferred teams and challenges.
+        </div>
+      </div>
+
+      <div className="accordion-item">
+        <input type="checkbox" id="accordion3" />
+        <label htmlFor="accordion3" className="accordion-item-title">
+          <span className="icon"></span>Do I need prior experience to participate?
+        </label>
+        <div className="accordion-item-desc">
+          No prior experience is required. Hackathon 2025 welcomes participants of all skill levels, whether you're a beginner or a seasoned developer. We also provide mentorship throughout the event.
+        </div>
+      </div>
+
+      <div className="accordion-item">
+        <input type="checkbox" id="accordion4" />
+        <label htmlFor="accordion4" className="accordion-item-title">
+          <span className="icon"></span>What challenges can I expect at Hackathon 2025?
+        </label>
+        <div className="accordion-item-desc">
+          Challenges at Hackathon 2025 will include building AI solutions, blockchain projects, mobile apps, and web-based platforms. More information on specific challenges will be released closer to the event.
+        </div>
+      </div>
+
+      <div className="accordion-item">
+        <input type="checkbox" id="accordion5" />
+        <label htmlFor="accordion5" className="accordion-item-title">
+          <span className="icon"></span>What prizes will the winners receive?
+        </label>
+        <div className="accordion-item-desc">
+          Winners of Hackathon 2025 will receive cash prizes, gift cards, and internship opportunities with top tech companies. The first-place team will also get the chance to showcase their project at a special event.
+        </div>
       </div>
     </div>
   );

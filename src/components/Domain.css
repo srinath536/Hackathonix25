@@ -1,9 +1,4 @@
 /* Global styles to reset defaults */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
 /* Container Styles for the whole section */
 .container {
@@ -13,9 +8,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
+  padding: 15px;
   justify-content: flex-start;
-  margin-left: 20px;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 /* Heading style */
@@ -25,7 +21,7 @@
   font-family: "VT323", serif;
   font-style: normal;
   font-size: 5rem;
-  text-align: center; /* Center-align the heading */
+  text-align: center;
   width: 100%; /* Ensure heading width is 100% of its container */
 }
 
@@ -35,8 +31,8 @@
   grid-template-columns: repeat(4, 1fr); /* 4 columns by default */
   gap: 20px;
   width: 100%;
-  overflow-y: hidden;
-  margin-left: 65px;
+  margin-left: auto;
+  margin-right: auto; /* Ensure centering */
 }
 
 /* Card Styles */
@@ -100,7 +96,7 @@
   font-size: 24px;
   font-weight: bold;
   color: white;
-  margin-top: 20px; /* Adjust as needed */
+  margin-top: 20px;
 }
 
 /* Description text on back */
@@ -113,50 +109,46 @@
 
 /* Style for logo inside card-front */
 .card-logo {
-  width: 100px; /* Adjust based on the size of your logo */
+  width: 100px;
   height: auto;
-  margin-bottom: 20px; /* Space between the logo and the title */
-}
-
-/* Scrolling effect for small devices */
-.card.scrolled {
-  transform: scale(1.1);
+  margin-bottom: 20px; 
 }
 
 /* Responsive adjustments */
-@media screen and (max-width: 1024px) {
-  /* For medium-sized screens like tablets, 2 columns */
+@media screen and (min-width: 1025px) {
   .card-container {
-    grid-template-columns: repeat(2, 1fr);
+    margin-left: 40px; /* Shift container slightly to the right */
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr); /* Two cards per row */
+    justify-content: center; /* Ensure items are centered */
     margin: 0 auto;
-    height: auto; /* Ensure all content fits */
   }
 
-  /* Adjust heading size on tablet screens */
   .heading {
     font-size: 3rem;
   }
-  
 }
 
 @media screen and (max-width: 600px) {
-  /* For smaller screens like mobile, stack cards vertically */
   .card-container {
-    grid-template-columns: 1fr;
-    margin: 0 auto;
-    height: auto; /* Ensure content doesn't get cut off */
+    grid-template-columns: 1fr; /* Single card per row */
+    justify-content: center; /* Center-align items */
+    gap: 20px; /* Add spacing between rows */
   }
 
-  /* Adjust heading size on small screens */
   .heading {
     font-size: 2.5rem;
     width: 100%; 
-    margin-right: 23px; /* Optionally, adjust width for better centering */
   }
 
-  /* Adjust card dimensions for small screens */
+  /* Adjust card dimensions for smaller screens */
   .card {
-    width: 90%;
-    height: 400px; /* Specify a min height for small devices to ensure cards don't collapse */
+    width: 90%; /* Reduce card width for better centering */
+    height: 400px;
+    margin: 0 auto; /* Center each card */
   }
 }

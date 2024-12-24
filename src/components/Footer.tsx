@@ -41,7 +41,7 @@ const Footer: React.FC = () => {
 
         {/* KCG College Info Section */}
         <div className="college-info">
-          <p><a href="http://www.kcgcollege.edu.in/" target="_blank" rel="noopener noreferrer" className="college-link">KCG College of Technology</a></p>
+          <p><a href="https://kcgcollege.ac.in/" target="_blank" rel="noopener noreferrer" className="college-link">KCG College of Technology</a></p>
         </div>
 
         {/* All Rights Reserved */}

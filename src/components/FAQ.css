@@ -1,95 +1,116 @@
-.faq-container {
-  width: 97%;
-  max-width: 1200px;
-  background-color: black;
-  color: white;
+/* FAQ.css */
+
+/* Main accordion container */
+.accordion {
+  background: black;
+  display: flex;
+  flex-direction: column;
+  font-family: "VT323", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5rem; /* Adjust font size for overall text */
+  max-width: 97%;
+  min-width: 320px; /* Set width to 97% for larger devices */
   margin: 50px auto;
-  padding: 20px;
-  border-radius: 10px;
-  text-align: center;
+  padding: 0 50px;
+  color: white;
+  margin:0;
 }
 
-.faq-title {
-  font-size: 36px;
-  font-weight: bold;
-  color: #f9a602;
+/* Accordion header */
+.accordion h1 {
+  font-size: 36px; /* Increased font size for header */
+  text-align: center;
   margin-bottom: 20px;
 }
 
-.faq-list {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  align-items: flex-start;
-  justify-content: center;
+/* Accordion item */
+.accordion-item {
+  margin-top: 16px;
+  border: 1px solid #222; /* Dark border for contrast */
+  border-radius: 6px;
+  background: black; /* Slightly darker background for each item */
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 2px 0px;
 }
 
-.faq-item {
-  background-color: #333;
-  padding: 10px;
-  border-radius: 8px;
+/* Accordion item title (question) */
+.accordion-item .accordion-item-title {
+  position: relative;
+  margin: 0;
+  display: flex;
   width: 100%;
-  transition: background-color 0.3s ease;
-}
-
-.faq-item:hover {
-  background-color: #444;
-}
-
-.faq-question {
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 18px; /* Increased font size for question */
   cursor: pointer;
-  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  padding: 16px 20px; /* Increased padding for larger clickable area */
+  box-sizing: border-box;
   align-items: center;
-  justify-content: flex-start;
 }
 
-.dropdown-icon {
-  margin-right: 10px;  /* Space between the icon and text */
-  font-size: 20px;
-  color: #f9a602;
+/* Accordion item description (answer) */
+.accordion-item .accordion-item-desc {
+  display: none;
+  font-size: 16px; /* Increased font size for answer */
+  line-height: 24px; /* Adjust line-height for better readability */
+  font-weight: 300;
+  color: #bbb; /* Light grey text */
+  border-top: 1px dashed #444; /* Darker dashed border */
+  padding: 14px 20px 20px; /* Increased padding */
+  box-sizing: border-box;
 }
 
-.faq-answer {
-  font-size: 16px;
-  margin-top: 10px;
-  color: #ccc;
-  padding-left: 30px;
+/* Hidden checkbox for accordion functionality */
+.accordion-item input[type="checkbox"] {
+  position: absolute;
+  height: 0;
+  width: 0;
+  opacity: 0;
 }
 
-@media screen and (max-width: 768px) {
-  .faq-title {
-    font-size: 30px;
-  }
-
-  .faq-question {
-    font-size: 16px;
-  }
-
-  .faq-answer {
-    font-size: 14px;
-  }
-
-  .faq-item {
-    padding: 8px;
-  }
+/* When checkbox is checked, display the answer */
+.accordion-item input[type="checkbox"]:checked ~ .accordion-item-desc {
+  display: block;
 }
 
-@media screen and (max-width: 480px) {
-  .faq-title {
-    font-size: 26px;
+/* Accordion item icon when checked */
+.accordion-item input[type="checkbox"]:checked ~ .accordion-item-title .icon:after {
+  content: "-";
+  font-size: 22px; /* Larger icon when open */
+}
+
+/* Accordion item icon when not checked */
+.accordion-item input[type="checkbox"] ~ .accordion-item-title .icon:after {
+  content: "+";
+  font-size: 22px; /* Larger icon when closed */
+}
+
+/* No margin-top for first accordion item */
+.accordion-item:first-child {
+  margin-top: 0;
+}
+
+/* Accordion item icon style */
+.accordion-item .icon {
+  margin-left: 14px;
+  font-size: 22px; /* Larger icon size */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 767px) {
+  .accordion {
+    padding: 0 16px;
   }
 
-  .faq-question {
-    font-size: 14px;
+  .accordion h1 {
+    font-size: 22px;
   }
 
-  .faq-answer {
-    font-size: 12px;
+  .accordion-item .accordion-item-title {
+    font-size: 14px; /* Adjust question font size on small devices */
   }
 
-  .faq-item {
-    padding: 6px;
+  .accordion-item .accordion-item-desc {
+    font-size: 14px; /* Adjust answer font size on small devices */
   }
 }

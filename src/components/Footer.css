@@ -7,7 +7,9 @@
   width: 100%; /* Prevent it from stretching too much on large screens */
   margin: 0 auto; /* Center the footer on the page */
   box-sizing: border-box;
-  font-family: "Arial", sans-serif;
+  font-weight: bolder;
+  font-family: "VT323", serif;
+  font-style: normal;
 }
 
 /* Footer Content */
@@ -20,9 +22,12 @@
 
 /* Hackathonix 25 Heading */
 .hackathon-title {
+  font-family: "Press Start 2P", serif;
+  font-weight: 400;
+  font-style: normal;
   font-size: 2.5rem;
   margin-bottom: 15px;
-  font-weight: bold;
+  
   color: white;
 }
 
