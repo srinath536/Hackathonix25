@@ -48,12 +48,12 @@
 
 .receipt-item {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Two columns for each item label and value */
+  grid-template-columns: 1fr 1fr; 
   gap: 10px;
   width: 100%;
   font-size: 1rem;
   margin: 8px 0;
-  align-items: center;  /* Ensures they are vertically aligned */
+  align-items: center;  
 }
 
 .item-label {
@@ -83,11 +83,11 @@
   margin-top: 20px;
 }
 
-/* Media Query for Small Devices */
+
 @media screen and (max-width: 600px) {
 
   .prizes-container {
-    margin-left: 6px;  /* Shift the container slightly to the right */
+    margin-left: 6px;  
   }
   .receipt {
     width: 95%;

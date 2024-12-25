@@ -1,8 +1,7 @@
-/* Promo Section */
 .promo-section {
-  background: rgba(255, 255, 255, 0); /* Gradient background */
-  color: white; /* White text */
-  backdrop-filter: blur(10px); /* Glass effect */
+  background: rgba(255, 255, 255, 0);
+  color: white;
+  backdrop-filter: blur(10px);
   box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
   padding: 15px 20px;
   text-align: center;
@@ -11,37 +10,33 @@
   font-style: normal;
   font-size: 1.4rem;
   font-weight: lighter;
-  z-index: 100; /* Above the header */
+  z-index: 100;
   position: relative;
   top: 0;
   width: 100%;
-  margin-bottom: 0; /* No extra space below */
-  height: auto; /* Adjust height dynamically */
+  margin-bottom: 0;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  
 }
 
-
-/* Header */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 46px 20px 36px;
-  position: relative; /* Fixed position below promo-section */
-  top: 0px; /* Offset from promo-section */
-  z-index: 99; /* Below promo-section */
+  position: relative;
+  top: 0px;
+  z-index: 99;
   width: 100%;
   box-sizing: border-box;
-  background-color: rgba(255, 255, 255, 0); /* Fully transparent background */
-  backdrop-filter: blur(10px); /* Glass effect */
-  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0); /* No shadow initially */
-  transition: none; /* Removed the transition for a fixed header */
+  background-color: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(10px);
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+  transition: none;
 }
 
-/* Logo */
 .logo {
   font-family: "Bruno Ace", sans-serif;
   color: whitesmoke;
@@ -54,7 +49,6 @@
   transform: scale(1.1);
 }
 
-/* Navigation */
 .navigation {
   display: flex;
   justify-content: space-between;
@@ -87,29 +81,21 @@
   color: white;
 }
 
-/* Mobile Responsive */
-/* Mobile Responsive */
 @media (max-width: 900px) {
   .header {
-    display: none; /* Hide header on small devices */
+    display: none;
   }
 
   .promo-section {
-    font-size: 1rem; /* Adjust font size for mobile */
-    height: auto; /* Allow dynamic height */
+    font-size: 1rem;
+    height: auto;
     padding: 10px;
   }
-
-  
 }
 
-/* Further adjustment for extra small screens (max-width: 480px) */
 @media (max-width: 480px) {
   .promo-section {
-    font-size: 0.9rem; /* Further adjust font size for very small devices */
+    font-size: 0.9rem;
     padding: 10px 15px;
   }
-
-  
 }
-

@@ -17,7 +17,7 @@ const Prizes: React.FC = () => {
 
         <hr className="receipt-dotted-line" />
 
-        {/* Adding Food Items */}
+       
         <div className="receipt-item">
           <span className="item-label">No. of Items:</span>
           <span className="item-value">4</span>

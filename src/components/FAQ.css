@@ -1,6 +1,3 @@
-/* FAQ.css */
-
-/* Main accordion container */
 .accordion {
   background: black;
   display: flex;
@@ -8,59 +5,54 @@
   font-family: "VT323", serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 1.5rem; /* Adjust font size for overall text */
+  font-size: 1.5rem;
   max-width: 97%;
-  min-width: 320px; /* Set width to 97% for larger devices */
+  min-width: 320px;
   margin: 50px auto;
   padding: 0 50px;
   color: white;
-  margin:0;
+  margin: 0;
 }
 
-/* Accordion header */
 .accordion h1 {
-  font-size: 36px; /* Increased font size for header */
+  font-size: 36px;
   text-align: center;
   margin-bottom: 20px;
 }
 
-/* Accordion item */
 .accordion-item {
   margin-top: 16px;
-  border: 1px solid #222; /* Dark border for contrast */
+  border: 1px solid #222;
   border-radius: 6px;
-  background: black; /* Slightly darker background for each item */
+  background: black;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 2px 0px;
 }
 
-/* Accordion item title (question) */
 .accordion-item .accordion-item-title {
   position: relative;
   margin: 0;
   display: flex;
   width: 100%;
-  font-size: 18px; /* Increased font size for question */
+  font-size: 18px;
   cursor: pointer;
   justify-content: space-between;
   flex-direction: row-reverse;
-  padding: 16px 20px; /* Increased padding for larger clickable area */
+  padding: 16px 20px;
   box-sizing: border-box;
   align-items: center;
 }
 
-/* Accordion item description (answer) */
 .accordion-item .accordion-item-desc {
   display: none;
-  font-size: 16px; /* Increased font size for answer */
-  line-height: 24px; /* Adjust line-height for better readability */
+  font-size: 16px;
+  line-height: 24px;
   font-weight: 300;
-  color: #bbb; /* Light grey text */
-  border-top: 1px dashed #444; /* Darker dashed border */
-  padding: 14px 20px 20px; /* Increased padding */
+  color: #bbb;
+  border-top: 1px dashed #444;
+  padding: 14px 20px 20px;
   box-sizing: border-box;
 }
 
-/* Hidden checkbox for accordion functionality */
 .accordion-item input[type="checkbox"] {
   position: absolute;
   height: 0;
@@ -68,35 +60,29 @@
   opacity: 0;
 }
 
-/* When checkbox is checked, display the answer */
 .accordion-item input[type="checkbox"]:checked ~ .accordion-item-desc {
   display: block;
 }
 
-/* Accordion item icon when checked */
 .accordion-item input[type="checkbox"]:checked ~ .accordion-item-title .icon:after {
   content: "-";
-  font-size: 22px; /* Larger icon when open */
+  font-size: 22px;
 }
 
-/* Accordion item icon when not checked */
 .accordion-item input[type="checkbox"] ~ .accordion-item-title .icon:after {
   content: "+";
-  font-size: 22px; /* Larger icon when closed */
+  font-size: 22px;
 }
 
-/* No margin-top for first accordion item */
 .accordion-item:first-child {
   margin-top: 0;
 }
 
-/* Accordion item icon style */
 .accordion-item .icon {
   margin-left: 14px;
-  font-size: 22px; /* Larger icon size */
+  font-size: 22px;
 }
 
-/* Responsive Design */
 @media screen and (max-width: 767px) {
   .accordion {
     padding: 0 16px;
@@ -107,10 +93,10 @@
   }
 
   .accordion-item .accordion-item-title {
-    font-size: 14px; /* Adjust question font size on small devices */
+    font-size: 14px;
   }
 
   .accordion-item .accordion-item-desc {
-    font-size: 14px; /* Adjust answer font size on small devices */
+    font-size: 14px;
   }
 }

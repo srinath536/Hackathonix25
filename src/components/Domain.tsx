@@ -1,4 +1,4 @@
-import "./Domain.css"; // Import the updated CSS
+import "./Domain.css"; 
 import appdevLogo from "../assets/appdev.png"; 
 import ai from "../assets/ai.png";
 import iot from "../assets/iot.png";
@@ -35,7 +35,6 @@ const Domain = () => {
         {domains.map((domain, index) => (
           <div key={index} className="card">
             <div className="card-front">
-              {/* Place the logo in the front */}
               <img src={domain.logo} alt={`${domain.title} logo`} className="card-logo" />
               <p className="card-title">{domain.title}</p>
             </div>

@@ -1,9 +1,6 @@
-/* Global styles to reset defaults */
-
-/* Container Styles for the whole section */
 .container {
   width: 97%;
-  height: auto; /* Allow container height to adjust based on content */
+  height: auto;
   background-color: black;
   display: flex;
   flex-direction: column;
@@ -14,7 +11,6 @@
   box-sizing: border-box;
 }
 
-/* Heading style */
 .heading {
   margin-bottom: 30px;
   color: white;
@@ -22,20 +18,18 @@
   font-style: normal;
   font-size: 5rem;
   text-align: center;
-  width: 100%; /* Ensure heading width is 100% of its container */
+  width: 100%;
 }
 
-/* Card container */
 .card-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 columns by default */
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   width: 100%;
   margin-left: auto;
-  margin-right: auto; /* Ensure centering */
+  margin-right: auto;
 }
 
-/* Card Styles */
 .card {
   position: relative;
   width: 250px;
@@ -47,10 +41,8 @@
   perspective: 1000px;
   overflow: hidden;
   transition: transform 0.6s;
-  
 }
 
-/* Front and back faces of the card */
 .card .card-front,
 .card .card-back {
   position: absolute;
@@ -68,32 +60,28 @@
   overflow: hidden;
 }
 
-/* Front face styles */
 .card-front {
   background-color: #000;
-  z-index: 2; /* Keep front face in front initially */
+  z-index: 2;
   color: white;
-  flex-direction: column; /* Stack logo and title */
+  flex-direction: column;
   padding: 10px;
 }
 
-/* Back face styles */
 .card-back {
   background-color: #fff;
   color: black;
-  transform: rotateY(180deg); /* Initially rotate back face */
+  transform: rotateY(180deg);
 }
 
-/* Add hover effect to flip card */
 .card:hover .card-front {
-  transform: rotateY(180deg); /* Rotate front to back */
+  transform: rotateY(180deg);
 }
 
 .card:hover .card-back {
-  transform: rotateY(0); /* Rotate back to front */
+  transform: rotateY(0);
 }
 
-/* Title and description */
 .card-title {
   font-size: 35px;
   font-style: normal;
@@ -102,7 +90,6 @@
   margin-top: 20px;
 }
 
-/* Description text on back */
 .card-description {
   font-size: 16px;
   font-weight: normal;
@@ -110,24 +97,22 @@
   color: black;
 }
 
-/* Style for logo inside card-front */
 .card-logo {
   width: 135px;
   height: auto;
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
 }
 
-/* Responsive adjustments */
 @media screen and (min-width: 1025px) {
   .card-container {
-    margin-left: 40px; /* Shift container slightly to the right */
+    margin-left: 40px;
   }
 }
 
 @media screen and (max-width: 1024px) {
   .card-container {
-    grid-template-columns: repeat(2, 1fr); /* Two cards per row */
-    justify-content: center; /* Ensure items are centered */
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
     margin: 0 auto;
   }
 
@@ -138,20 +123,19 @@
 
 @media screen and (max-width: 600px) {
   .card-container {
-    grid-template-columns: 1fr; /* Single card per row */
-    justify-content: center; /* Center-align items */
-    gap: 20px; /* Add spacing between rows */
+    grid-template-columns: 1fr;
+    justify-content: center;
+    gap: 20px;
   }
 
   .heading {
     font-size: 2.5rem;
-    width: 100%; 
+    width: 100%;
   }
 
-  /* Adjust card dimensions for smaller screens */
   .card {
-    width: 90%; /* Reduce card width for better centering */
+    width: 90%;
     height: 400px;
-    margin: 0 auto; /* Center each card */
+    margin: 0 auto;
   }
 }

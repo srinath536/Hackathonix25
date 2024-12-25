@@ -1,18 +1,16 @@
-/* Footer Container */
 .footer-container {
   background-color: black;
   color: white;
   padding: 30px 0;
-  border-radius: 20px; /* Make the box rounded */
-  width: 100%; /* Prevent it from stretching too much on large screens */
-  margin: 0 auto; /* Center the footer on the page */
+  border-radius: 20px;
+  width: 100%;
+  margin: 0 auto;
   box-sizing: border-box;
   font-weight: bolder;
   font-family: "VT323", serif;
   font-style: normal;
 }
 
-/* Footer Content */
 .footer-content {
   display: flex;
   flex-direction: column;
@@ -20,18 +18,15 @@
   text-align: center;
 }
 
-/* Hackathonix 25 Heading */
 .hackathon-title {
   font-family: "Press Start 2P", serif;
   font-weight: 400;
   font-style: normal;
   font-size: 2.5rem;
   margin-bottom: 15px;
-  
   color: white;
 }
 
-/* Contact Us Section */
 .contact-us {
   margin-top: 15px;
 }
@@ -47,7 +42,6 @@
   font-weight: 300;
 }
 
-/* Built By Section */
 .team-members p {
   font-size: 1rem;
   margin: 10px 0;
@@ -62,23 +56,22 @@
 }
 
 .team-members a:hover {
-  color: #00bcd4; /* Blue color for hover */
+  color: #00bcd4;
   transition: 0.3s;
 }
 
-/* Social Media Icons */
 .social-media {
   margin-top: 15px;
-  display: grid; /* Use grid layout */
-  grid-template-columns: repeat(2, 1fr); /* 2 columns */
-  gap: 20px; /* Space between icons */
-  justify-content: center; /* Center align the icons */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-content: center;
   text-align: center;
 }
 
 .social-icon {
-  font-size: 30px;  /* Adjust the icon size */
-  color: white;  /* Set icon color */
+  font-size: 30px;
+  color: white;
   cursor: pointer;
 }
 
@@ -87,7 +80,6 @@
   transition: 0.3s;
 }
 
-/* College Info Section */
 .college-info p {
   font-size: 1rem;
   margin-top: 20px;
@@ -106,14 +98,12 @@
   text-decoration: underline;
 }
 
-/* All Rights Reserved Section */
 .copyright-section p {
   font-size: 1rem;
   margin: 15px 0;
   font-weight: normal;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .footer-content {
     padding: 20px;
@@ -128,7 +118,7 @@
   }
 
   .social-media {
-    grid-template-columns: 1fr; /* Stack icons in 1 column on smaller screens */
+    grid-template-columns: 1fr;
     margin-top: 10px;
     grid-template-columns: repeat(2, 1fr);
   }

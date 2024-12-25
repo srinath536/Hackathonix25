@@ -1,12 +1,14 @@
 import "./AboutHack.css";
+const brochurePath = "/brochure.pdf";
+
 
 const AboutHack = () => {
   return (
     <div className="book">
        <a 
-        href="\brochure.pdf"  // The path to the file you want to download
+        href= {brochurePath}  
         className="download-button"
-        download="Hackathonix_Brochure.pdf"   // You can specify the default name for the download
+        download="brochure.pdf"   
       >
         Download Brochure
       </a>

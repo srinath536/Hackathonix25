@@ -1,4 +1,4 @@
-// FAQ.tsx
+
 import React from "react";
 import "./FAQ.css";
 
