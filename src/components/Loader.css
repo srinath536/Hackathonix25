@@ -10,7 +10,7 @@
     justify-content: center;  /* Center text horizontally */
     align-items: center;      /* Center text vertically */
     z-index: 9999;       
-
+}
 /* Styling for the loading text */
 .loader-text {
     font-family: "VT323", monospace;
