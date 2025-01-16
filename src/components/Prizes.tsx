@@ -1,57 +1,26 @@
-import React from "react";
-import "./Prizes.css";
+import React from 'react';
+import './Prizes.css';
+import celebrationImage from '../assets/prize.svg'; // Ensure the correct path for your image
 
-const Prizes: React.FC = () => {
+const Prizes = () => {
   return (
     <div className="prizes-container">
-      <div className="receipt">
-        <h1 className="receipt-title">Prize Pool Receipt</h1>
-        <p className="receipt-detail">27th February 2025</p>
-        <p className="receipt-detail">9:00 AM</p>
-        <p className="receipt-detail">
-          <span>Hackathon Name:</span> Hackathonix25
+      <div className="prizes-text">
+        <h2 className="prizes-title">Cash Pool</h2>
+        <p className="prizes-description">
+          Join us in this intergalactic adventure and compete for a prize pool worth ₹60,000! 🚀
         </p>
-        <p className="receipt-detail">
-          <span>Bill Code:</span> HACKATHONIX27022025
+        <p className="prizes-details">
+          Showcase your brilliance, tackle exciting challenges, and emerge as the winner.
+          This is your opportunity to be celebrated among the stars. Let your creativity shine and be a part of this unforgettable hackathon!
         </p>
-
-        <hr className="receipt-dotted-line" />
-
-       
-        <div className="receipt-item">
-          <span className="item-label">No. of Items:</span>
-          <span className="item-value">4</span>
-        </div>
-        
-        <div className="receipt-item">
-          <span className="item-label">Name of The Item:</span>
-          <span className="item-value">App & Web development </span>
-        </div>
-
-        <div className="receipt-item">
-          <span className="item-label">Name of The Item:</span>
-          <span className="item-value">Cyber Security</span>
-        </div>
-
-        <div className="receipt-item">
-          <span className="item-label">Name of The Item:</span>
-          <span className="item-value">AI & ML</span>
-        </div>
-
-        <div className="receipt-item">
-          <span className="item-label">Name of The Item:</span>
-          <span className="item-value">IOT & Hardware</span>
-        </div>
-
-        <hr className="receipt-dotted-line" />
-
-        <div className="receipt-total">
-          <span>Total:</span> ₹60,000
-        </div>
-
-        <hr className="receipt-dotted-line" />
-
-        <p className="receipt-footer">Thank you for visiting us!</p>
+      </div>
+      <div className="prizes-image-container">
+        <img 
+          src={celebrationImage} 
+          alt="Celebrating Prize Pool" 
+          className="prizes-image" 
+        />
       </div>
     </div>
   );

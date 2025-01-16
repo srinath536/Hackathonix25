@@ -6,21 +6,33 @@ import Header from './components/Header';
 import HeroSection from './components/HeroSection';
 import Prizes from './components/Prizes';
 import Domain from './components/Domain';
+import Loader from './components/Loader';
+
 function App() {
-return (
-  <div>
-      <Header/>
-      <HeroSection/>
+  
+  return (
+    <div>
+      <Loader/>
+      <Header />
+      <div id="home">
+        <HeroSection />
+      </div>
+      <div id="prizes">
+      
+      </div>
       <AboutHack/>
-      <Domain/>
-      <Prizes/>
+      <div id="sponsors">
+        <Domain />
+      </div>
+      <div id="core">
+       
+      </div>
       <FAQ/>
-      <Footer/>
-      
-      
+      <div id="contact-us">
+        <Footer />
+      </div>
     </div>
-   
-  )
+  );
 }
 
-export default App
+export default App;

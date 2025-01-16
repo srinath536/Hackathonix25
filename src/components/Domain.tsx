@@ -30,7 +30,7 @@ const domains = [
 const Domain = () => {
   return (
     <div className="container">
-      <h2 className="heading">Domains</h2>
+      <h2 className="heading">DOMAINS</h2>
       <div className="card-container">
         {domains.map((domain, index) => (
           <div key={index} className="card">

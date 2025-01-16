@@ -6,7 +6,6 @@
   height: calc(100vh + 120px);
   width: 100%;
   overflow: hidden;
-  margin-top: -150px;
   padding-top: 70px;
 }
 
@@ -18,6 +17,7 @@
   height: 100%;
   object-fit: cover;
   z-index: 0;
+  top:-10%
 }
 
 .hero-overlay {
@@ -29,14 +29,14 @@
   flex-direction: column;
   align-items: center;
   padding: 0 20px;
-  top: -10%;
+  bottom: 18%;
 }
 
 .hero-overlay h1 {
   font-family: "Press Start 2P", serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 4.5rem;
+  font-size: 3.5rem;
   text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   margin-bottom: 20px;
 }
@@ -105,5 +105,6 @@
     width: 100%;
     height: 100%;
     transform-origin: center center;
+    top:0;
   }
 }

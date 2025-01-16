@@ -84,10 +84,11 @@
 
 .card-title {
   font-size: 35px;
-  font-style: normal;
   font-weight: 300;
   color: white;
   margin-top: 20px;
+  font-family: "VT323", serif;
+  font-style: normal;
 }
 
 .card-description {
@@ -95,6 +96,8 @@
   font-weight: normal;
   opacity: 0.7;
   color: black;
+  font-family: "VT323", serif;
+ 
 }
 
 .card-logo {

@@ -1,5 +1,5 @@
 .promo-section {
-  background: rgba(255, 255, 255, 0);
+  background: black;
   color: white;
   backdrop-filter: blur(10px);
   box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
@@ -7,7 +7,6 @@
   text-align: center;
   font-family: "VT323", serif;
   font-weight: 400;
-  font-style: normal;
   font-size: 1.4rem;
   font-weight: lighter;
   z-index: 100;
@@ -28,31 +27,17 @@
   padding: 20px 46px 20px 36px;
   position: relative;
   top: 0px;
-  z-index: 99;
   width: 100%;
   box-sizing: border-box;
-  background-color: rgba(255, 255, 255, 0);
-  backdrop-filter: blur(10px);
-  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
-  transition: none;
-}
-
-.logo {
-  font-family: "Bruno Ace", sans-serif;
-  color: whitesmoke;
-  font-size: 1.8rem;
-  font-weight: bold;
-  transition: transform 0.2s ease-in-out;
-}
-
-.logo:hover {
-  transform: scale(1.1);
+  background-color: black; /* Set background to transparent */  /* Optional: keeps the blur effect */
+  box-shadow: none;
 }
 
 .navigation {
   display: flex;
-  justify-content: space-between;
+  justify-content: center; /* Center the navigation links */
   align-items: center;
+  margin-left: 380px;
 }
 
 .navigation ul {
@@ -60,7 +45,7 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 1rem;
+  gap: 3rem; /* Increased gap */
 }
 
 .navigation li {
@@ -68,18 +53,21 @@
   font-weight: 400;
   font-style: normal;
   font-size: 1.5rem;
-  padding: 10px 15px;
-  border-radius: 8px;
-  transition: transform 0.2s ease-in-out, background-color 0.3s ease, color 0.3s ease;
   color: whitesmoke;
   cursor: pointer;
+}
+
+.navigation li a {
+  text-decoration: none;
+  color: whitesmoke;
+  transition: transform 0.2s ease-in-out, color 0.3s ease;
 }
 
 .navigation li:hover {
   transform: translateY(-0.3rem);
   background-color: transparent;
   color: white;
-}
+} 
 
 @media (max-width: 900px) {
   .header {
