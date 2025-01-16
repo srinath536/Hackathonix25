@@ -1,16 +1,16 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import './Loader.css';
 
 const Loader = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       const loader = document.getElementById('loader');
-      if (loader) { // Check if 'loader' is not null or undefined
+      if (loader) {
         loader.style.display = 'none';
       }
-    }, 1000);
+    }, 1000);  // Changed to 1 second for demonstration
 
-    return () => clearTimeout(timer); // Clear the timeout on component unmount
+    return () => clearTimeout(timer); // Cleanup the timer
   }, []);
 
   return (

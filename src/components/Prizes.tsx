@@ -1,4 +1,3 @@
-import React from 'react';
 import './Prizes.css';
 import celebrationImage from '../assets/prize.svg'; // Ensure the correct path for your image
 
