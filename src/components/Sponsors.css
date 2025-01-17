@@ -1,10 +1,9 @@
 .logoMarqueeSection {
-    padding-top: 10vh;
-    padding-bottom: 10vh;
     background-color: black;
     margin: 0;
     box-sizing: border-box;
     align-content: center;
+   
   }
   
   /* Styling for the sponsor heading */

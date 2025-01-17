@@ -15,24 +15,14 @@ function App() {
     <div>
       <Loader/>
       <Header />
-      <div id="home">
-        <HeroSection />
-      </div>
+      <HeroSection />
       <AboutHack/>
-      <div id="sponsors">
-        <Domain />
-      </div>
-      <div id="prizes">
+      <Domain />
       <Prizes/>
-      </div>
-      <div id="core">
-       <Sponsors/>
-      </div>
+      <Sponsors/>
       <FAQ/>
-      <div id="contact-us">
-        <Footer />
-      </div>
-    </div>
+      <Footer />
+     </div>
   );
 }
 
