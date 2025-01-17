@@ -6,6 +6,7 @@ import Header from './components/Header';
 import HeroSection from './components/HeroSection';
 import Domain from './components/Domain';
 import Loader from './components/Loader';
+import Prizes from './components/Prizes'
 
 function App() {
   
@@ -16,12 +17,12 @@ function App() {
       <div id="home">
         <HeroSection />
       </div>
-      <div id="prizes">
-      
-      </div>
       <AboutHack/>
       <div id="sponsors">
         <Domain />
+      </div>
+      <div id="prizes">
+      <Prizes/>
       </div>
       <div id="core">
        
