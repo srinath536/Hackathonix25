@@ -1,0 +1,113 @@
+/* Space Background */
+.space-container {
+    position: relative;
+    height: 30vh;
+    background: black;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  /* Stars */
+  .stars {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .star {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 5px white;
+    animation: star-flicker 2s infinite ease-in-out;
+  }
+  
+ 
+  
+  /* Keyframe Animations */
+  @keyframes star-flicker {
+    0%, 100% {
+      opacity: 0.8;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+  
+  
+  
+  
+  /* Planet */
+  .planet {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, #f6d69c 30%, #bca26c 70%);
+    border-radius: 50%;
+    bottom: 20%;
+    right: 20%;
+    box-shadow: inset -10px -10px 0px rgba(0, 0, 0, 0.3);
+    animation: orbit 8s infinite linear;
+  }
+  
+  /* Spaceship */
+  .spaceship {
+    position: absolute;
+    width: 40px;
+    height: 20px;
+    transform: translate(-50%, -50%);
+    transition: top 0.1s ease, left 0.1s ease;
+    
+  }
+  
+  .ship-body {
+    width: 60px;
+    height: 30px;
+    background: white;
+    border-radius: 15px 15px 10px 10px;
+    position: relative;
+  }
+  
+  /* Keyframe Animations */
+  @keyframes shooting-star {
+    0% {
+      top: -10%;
+      left: -10%;
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    100% {
+      top: 120%;
+      left: 130%;
+      opacity: 0;
+    }
+  }
+  
+  @keyframes orbit {
+    0% {
+      transform: rotate(0deg) translateX(0) rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg) translateX(0) rotate(-360deg);
+    }
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .planet {
+      width: 100px;
+      height: 100px;
+    }
+  
+    .spaceship {
+      width: 40px;
+      height: 20px;
+    }
+  }
+  

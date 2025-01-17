@@ -8,6 +8,7 @@ import Domain from './components/Domain';
 import Loader from './components/Loader';
 import Prizes from './components/Prizes'
 import Sponsors from './components/Sponsors';
+import Filler from './components/Filler';
 
 function App() {
   
@@ -17,6 +18,7 @@ function App() {
       <Header />
       <HeroSection />
       <AboutHack/>
+      <Filler/>
       <Domain />
       <Prizes/>
       <Sponsors/>
