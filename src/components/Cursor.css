@@ -1,0 +1,28 @@
+/* Hide default cursor on the entire page */
+body {
+    cursor: none; /* Hides default cursor */
+  }
+  
+  /* Style for the custom cursor container */
+  .cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none; /* Prevents the cursor div from interfering with interactions */
+    z-index: 9999;
+    transform: translate(-50%, -50%); /* Centers the astronaut */
+    transition: transform 0.2s ease;
+    transform-origin: center;
+  }
+  
+  /* Style for the astronaut image */
+  .astronaut {
+    width: 40px; /* Customize size of the astronaut */
+    height: 50px; /* Customize size */
+    background-size: contain; /* Ensures the image fits properly */
+    background-position: center;
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    pointer-events: none; /* Makes the astronaut un-interactive */
+    z-index: 9999;
+  }
+  
