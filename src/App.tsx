@@ -7,6 +7,7 @@ import HeroSection from './components/HeroSection';
 import Domain from './components/Domain';
 import Loader from './components/Loader';
 import Prizes from './components/Prizes'
+import Sponsors from './components/Sponsors';
 
 function App() {
   
@@ -25,7 +26,7 @@ function App() {
       <Prizes/>
       </div>
       <div id="core">
-       
+       <Sponsors/>
       </div>
       <FAQ/>
       <div id="contact-us">

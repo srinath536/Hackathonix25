@@ -1,0 +1,121 @@
+.logoMarqueeSection {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    background-color: black;
+    margin: 0;
+    box-sizing: border-box;
+    align-content: center;
+  }
+  
+  /* Styling for the sponsor heading */
+  .sponsorHeading {
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    font-family: "Press Start 2P", sans-serif;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    font-weight: 100;
+  }
+  
+  /* Make the container and logos responsive */
+  #logoMarqueeSection {
+    max-width: 100% !important;
+    margin: 0 auto;
+  }
+  
+  .default-content-container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    min-height: 50vh;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-top: 0;
+    padding-bottom: 0;
+    box-sizing: border-box;
+    /* Ensure equal space on both left and right */
+  }
+  
+  div.marquee > a > img {
+    height: 100px;
+    filter: grayscale(100%); /* Black and white logos */
+    transition: transform 0.3s ease; /* Smooth transition for scale on hover */
+  }
+  
+  div.marquee > a:hover > img {
+    transform: scale(1.1); /* Logo grows slightly on hover */
+  }
+  
+  .logoMarqueeSection > div > div {
+    padding-top: 0;
+    padding-bottom: 0;
+    min-height: 0;
+  }
+  
+  .marquee-wrapper {
+    display: inline-block;
+    white-space: nowrap;
+  }
+  
+  .marquee {
+    display: inline-block;
+    white-space: nowrap;
+    position: relative;
+    transform: translate3d(0%, 0, 0);
+    animation-name: marquee;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  
+  .marquee a {
+    display: inline-block;
+    white-space: nowrap;
+    padding-right: 5.4rem;
+  }
+  
+  .marquee-wrapper:hover .marquee {
+    animation-play-state: paused !important;
+  }
+  
+  @keyframes marquee {
+    0% {
+      transform: translate3d(0%, 0, 0);
+    }
+  
+    100% {
+      transform: translate3d(-100%, 0, 0);
+    }
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .sponsorHeading {
+      font-size: 1.5rem; /* Smaller font size on tablets and mobiles */
+    }
+  
+    div.marquee > a > img {
+      height: 80px; /* Adjust logo height on smaller screens */
+    }
+  
+    .default-content-container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .sponsorHeading {
+      font-size: 1.2rem; /* Smaller font size for mobile */
+    }
+  
+    div.marquee > a > img {
+      height: 60px; /* Adjust logo size for mobile */
+    }
+  
+    .default-content-container {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+  
