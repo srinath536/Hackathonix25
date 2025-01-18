@@ -9,8 +9,8 @@ import Loader from './components/Loader';
 import Prizes from './components/Prizes'
 import Sponsors from './components/Sponsors';
 import Filler from './components/Filler';
-import Cursor from './components/Cursor'
-
+import Cursor from './components/Cursor';
+import TimeLine from './components/TimeLine'
 function App() {
   
   return (
@@ -24,6 +24,7 @@ function App() {
       <Filler/>
       <Domain />
       <Prizes/>
+      <TimeLine/>
       <Sponsors/>
       <FAQ/>
       <Footer />
