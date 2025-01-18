@@ -5,7 +5,7 @@ import "./FAQ.css";
 const FAQ: React.FC = () => {
   return (
     <div className="accordion">
-      <h1>Frequently Asked Questions</h1>
+      <h1>FAQ</h1>
 
       <div className="accordion-item">
         <input type="checkbox" id="accordion1" />

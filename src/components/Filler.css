@@ -38,9 +38,6 @@
     }
   }
   
-  
-  
-  
   /* Planet */
   .planet {
     position: absolute;
@@ -73,30 +70,9 @@
   }
   
   /* Keyframe Animations */
-  @keyframes shooting-star {
-    0% {
-      top: -10%;
-      left: -10%;
-      opacity: 0;
-    }
-    10% {
-      opacity: 1;
-    }
-    100% {
-      top: 120%;
-      left: 130%;
-      opacity: 0;
-    }
-  }
+ 
   
-  @keyframes orbit {
-    0% {
-      transform: rotate(0deg) translateX(0) rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg) translateX(0) rotate(-360deg);
-    }
-  }
+  
   
   /* Responsive Design */
   @media screen and (max-width: 768px) {

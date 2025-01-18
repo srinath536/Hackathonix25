@@ -15,9 +15,13 @@
 }
 
 .accordion h1 {
-  font-size: 36px;
-  text-align: center;
-  margin-bottom: 20px;
+  color: white;
+    text-align: center;
+    font-size: 2rem;
+    font-family: "Press Start 2P", sans-serif;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    font-weight: 100;
 }
 
 .accordion-item {
@@ -33,7 +37,7 @@
   margin: 0;
   display: flex;
   width: 100%;
-  font-size: 18px;
+  font-size: 1.5rem;
   cursor: pointer;
   justify-content: space-between;
   flex-direction: row-reverse;
@@ -44,7 +48,7 @@
 
 .accordion-item .accordion-item-desc {
   display: none;
-  font-size: 16px;
+  font-size: 1.3rem;
   line-height: 24px;
   font-weight: 300;
   color: #bbb;
@@ -93,10 +97,10 @@
   }
 
   .accordion-item .accordion-item-title {
-    font-size: 14px;
+    font-size: 20px;
   }
 
   .accordion-item .accordion-item-desc {
-    font-size: 14px;
+    font-size: 16px;
   }
 }

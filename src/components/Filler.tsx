@@ -57,7 +57,7 @@ const Filler = () => {
         ))}
       </div>
       <div className="planet">
-      <div className="planet-ring"></div>
+     
       </div>
       <div className="spaceship" style={shipStyle}>
         <div className="ship-body"></div>
