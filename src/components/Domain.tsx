@@ -1,30 +1,30 @@
-import "./Domain.css"; 
-import appdevLogo from "../assets/appdev.png"; 
+import "./Domain.css";
+import appdevLogo from "../assets/appdev.png";
 import ai from "../assets/ai.png";
 import iot from "../assets/iot.png";
 import cyber from "../assets/cyber.png";
 
 const domains = [
-  { 
-    title: "App & Web Development", 
-    description: "Artificial Intelligence (AI) is about creating systems that can perform tasks that typically require human intelligence, such as image recognition and decision-making.",
-    logo: appdevLogo 
+  {
+    title: "App & Web Development",
+    description: "App & Web Development involves designing, building, and maintaining applications and websites using programming languages like JavaScript, HTML, CSS, and frameworks such as React and Angular.",
+    logo: appdevLogo,
   },
-  { 
-    title: "Cyber Security", 
-    description: "Machine Learning (ML) is a subset of AI focused on building algorithms and models that allow computers to learn and make predictions from data.",
-    logo: cyber
+  {
+    title: "Cyber Security",
+    description: "Cyber Security is the practice of protecting systems, networks, and programs from digital attacks to ensure confidentiality, integrity, and availability of data.",
+    logo: cyber,
   },
-  { 
-    title: "AI & ML", 
-    description: "Full Stack development involves working on both the front-end and back-end of web applications, using technologies like JavaScript, HTML, CSS, Node.js, and more.",
-    logo: ai
+  {
+    title: "AI & ML",
+    description: "AI & ML focuses on creating intelligent systems capable of learning, reasoning, and solving problems using algorithms for tasks like prediction and automation.",
+    logo: ai,
   },
-  { 
-    title: "IOT & Hardware", 
-    description: "UI/UX design focuses on creating user-friendly interfaces (UI) and optimizing the overall user experience (UX) of applications and websites.",
-    logo: iot
-  }
+  {
+    title: "IoT & Hardware",
+    description: "IoT & Hardware deals with connecting physical devices, sensors, and machines to the internet, enabling them to communicate and work together in real time.",
+    logo: iot,
+  },
 ];
 
 const Domain = () => {
